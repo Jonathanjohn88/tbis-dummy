@@ -1,44 +1,602 @@
-<!DOCTYPE html>
-<html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover"><meta name="theme-color" content="#0b1729"><title>Tuaran TB Surveillance | 2020</title>
-<style>
-:root{--bg:#f3f6fb;--ink:#152238;--muted:#73829a;--navy:#0b1729;--teal:#0b9d91;--teal2:#d8f5ef;--line:#e6eaf1;--card:#fff;--amber:#ed9e2d;--red:#e46663;--shadow:0 6px 28px #172d5010}*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--ink);font-family:Inter,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;-webkit-font-smoothing:antialiased}button,select{font:inherit}button{cursor:pointer}button:focus-visible,select:focus-visible{outline:3px solid #50c7be;outline-offset:2px}.shell{max-width:1440px;margin:auto}.hero{color:white;background:radial-gradient(ellipse at 85% 4%,#1a5367 0,transparent 42%),linear-gradient(115deg,#0b1729,#112b42);padding:27px 20px 30px;border-radius:0 0 24px 24px}.eyebrow{font-weight:800;letter-spacing:1.6px;font-size:10px;color:#79d4c9}.hero h1{font-size:clamp(24px,4vw,42px);letter-spacing:-1.2px;margin:9px 0 8px}.subtitle{color:#bbcad7;font-size:13px;line-height:1.55}.hero-row{display:flex;gap:16px;justify-content:space-between;align-items:flex-start;flex-wrap:wrap}.status{display:inline-flex;align-items:center;gap:7px;border:1px solid #ffffff30;border-radius:50px;padding:8px 12px;font-size:11px;color:#e5f8f5;background:#ffffff0d;white-space:nowrap}.dot{height:7px;width:7px;border-radius:50%;background:#52e3b5}.content{padding:0 14px 36px;margin-top:-12px}.filters{background:white;border-radius:17px;padding:16px;box-shadow:var(--shadow);border:1px solid var(--line);margin-bottom:16px}.filterbar{display:flex;justify-content:space-between;align-items:center;gap:10px;margin-bottom:12px}.filterbar h2{font-size:14px;margin:0}.filterbar small{color:var(--muted);font-size:11px}.controls{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:9px}.ctrl label{display:block;font-size:10px;color:#69788c;font-weight:800;letter-spacing:.5px;text-transform:uppercase;margin-bottom:6px}.ctrl select{width:100%;border:1px solid #dde4ed;padding:11px 28px 11px 11px;border-radius:10px;background:#f9fbfd;color:#263a53;font-size:12px;min-height:42px}.reset{border:0;color:#097a75;background:#e7f8f4;border-radius:9px;padding:9px 13px;font-weight:800;font-size:11px}.active{font-size:11px;color:#78879b;margin-top:10px}.kpis{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:11px}.kpi{border:1px solid var(--line);border-radius:15px;background:white;padding:17px 15px;min-height:115px;position:relative;overflow:hidden;box-shadow:var(--shadow)}.kpi:before{content:'';position:absolute;right:-20px;top:-28px;height:80px;width:80px;border-radius:50%;background:#0b9d910b}.kpi .label{font-size:11px;color:#758398;font-weight:700}.kpi .number{font-size:clamp(28px,4vw,38px);font-weight:850;letter-spacing:-1.5px;margin:12px 0 3px;line-height:1}.kpi .foot{font-size:10px;color:#8391a4}.kpi:nth-child(4) .number{color:var(--red)}.kpi:nth-child(5) .number{color:var(--teal)}.section{display:flex;justify-content:space-between;align-items:flex-end;margin:25px 2px 12px;gap:10px}.section h2{font-size:19px;letter-spacing:-.5px;margin:0}.section p{font-size:11px;color:var(--muted);margin:5px 0 0}.grid{display:grid;gap:13px}.card{background:var(--card);border:1px solid var(--line);border-radius:17px;padding:17px;box-shadow:var(--shadow);min-width:0}.card h3{font-size:14px;letter-spacing:-.15px;margin:0 0 5px}.card .desc{font-size:11px;color:var(--muted);margin-bottom:15px}.chart{width:100%;min-height:205px}.chart svg{display:block;width:100%;height:auto}.rowbar{display:grid;grid-template-columns:minmax(88px,1fr) 2.5fr 33px;align-items:center;gap:8px;padding:8px 0;font-size:11px}.barname{overflow:hidden;text-overflow:ellipsis;white-space:nowrap;color:#5c6b7e}.track{height:9px;background:#edf1f7;border-radius:20px;overflow:hidden}.fill{height:100%;background:linear-gradient(90deg,#22b2a5,#0a877f);border-radius:20px}.val{text-align:right;font-weight:800;color:#34465c}.legend{display:flex;gap:11px;flex-wrap:wrap;font-size:10px;color:#65748a;margin:10px 0 4px}.sw{display:inline-block;width:8px;height:8px;border-radius:2px;margin-right:5px}.donutbox{display:flex;gap:14px;align-items:center;justify-content:center;flex-wrap:wrap;min-height:195px}.donut{width:160px;height:160px;position:relative;flex-shrink:0}.donut svg{width:100%;height:100%;transform:rotate(-90deg)}.donut .middle{position:absolute;inset:0;display:flex;flex-direction:column;justify-content:center;align-items:center}.donut .middle strong{font-size:30px;letter-spacing:-1px}.donut .middle small{font-size:10px;color:#7b889b}.details{flex:1;min-width:120px}.detail{display:flex;align-items:center;justify-content:space-between;gap:8px;padding:7px 0;font-size:11px;color:#627086}.detail strong{color:#26384e}.detail em{font-style:normal;font-size:10px;color:#8a97a8}.tablewrap{overflow:auto;max-height:450px;border-radius:12px}table{border-collapse:collapse;width:100%;font-size:12px;white-space:nowrap;text-align:left}th{font-size:10px;letter-spacing:.5px;text-transform:uppercase;color:#718096;background:#f3f7fa;position:sticky;top:0}td,th{padding:12px 11px;border-bottom:1px solid #edf0f4}td:last-child,th:last-child{text-align:right}tr:hover td{background:#f7fbfc}.pill{display:inline-block;padding:4px 8px;border-radius:30px;background:#e7f8f4;color:#0d8278;font-weight:800;font-size:10px}.callout{background:#eef8f7;border:1px solid #ccece6;color:#326d6a;border-radius:13px;padding:12px 14px;font-size:11px;line-height:1.6;margin-top:14px}.warning{background:#fff8ec;color:#9a672a;border-color:#f4dfbc}.notes{color:#77869a;font-size:11px;line-height:1.7;margin-top:18px;padding:0 4px}.footer{border-top:1px solid #dfe5ed;padding:19px 5px;color:#8190a5;font-size:10px;line-height:1.7}.actions{display:flex;align-items:center;gap:9px}.export{border:1px solid #dbe4eb;color:#30455f;background:#fff;border-radius:10px;padding:10px 12px;font-size:11px;font-weight:800}.empty{color:#8a9cb0;font-size:12px;padding:30px 0;text-align:center}.quiet{color:#8390a1;font-size:10px;margin-top:12px}.hide{display:none!important}@media(min-width:680px){.content{padding:0 28px 48px}.hero{padding:38px 30px 50px}.controls{grid-template-columns:repeat(4,1fr)}.kpis{grid-template-columns:repeat(3,1fr)}.grid{grid-template-columns:repeat(2,minmax(0,1fr))}.span2{grid-column:span 2}.card{padding:22px}.rowbar{grid-template-columns:minmax(105px,1fr) 2.5fr 35px}.chart{min-height:220px}}@media(min-width:1050px){.content{padding:0 40px 52px}.hero{padding:42px 43px 54px}.controls{grid-template-columns:repeat(7,1fr)}.kpis{grid-template-columns:repeat(6,1fr)}.grid.three{grid-template-columns:1fr 1fr 1fr}.grid.three .span2{grid-column:span 2}}@media print{body{background:white}.hero{border-radius:0}.filters,.actions{display:none!important}.content{margin:0}.card,.kpi{box-shadow:none;break-inside:avoid}.grid{grid-template-columns:1fr 1fr}.footer{font-size:9px}}
-</style></head><body><div class="shell">
-<header class="hero"><div class="hero-row"><div><div class="eyebrow">PUBLIC HEALTH INTELLIGENCE / SABAH</div><h1>Tuberculosis Surveillance</h1><div class="subtitle">Tuaran District, Sabah · TBIS 101A dataset · 2019–2020 notification dates</div></div><div class="status"><span class="dot"></span><span>Offline dashboard · De-identified</span></div></div></header>
-<main class="content"><section class="filters"><div class="filterbar"><div><h2>Explore the data</h2><small>All visualisations update instantly</small></div><button class="reset" onclick="resetFilters()">↺ Reset</button></div><div class="controls" id="controls"></div><div class="active" id="active"></div></section>
-<section class="kpis" id="kpis"></section>
-<div class="section"><div><h2>Notifications over time</h2><p>Distribution by notification date</p></div><div class="actions"><button class="export" onclick="downloadCSV()">↓ Summary CSV</button><button class="export" onclick="window.print()">Print</button></div></div>
-<div class="grid"><article class="card span2"><h3>Monthly notification trend</h3><div class="desc">2020 monthly totals for the selected cohort. Earlier notifications are counted separately.</div><div id="trend" class="chart"></div><div id="dateNote" class="quiet"></div></article></div>
-<div class="section"><div><h2>Population profile</h2><p>Counts and percentages among currently selected records</p></div></div>
-<div class="grid three"><article class="card"><h3>Age distribution</h3><div class="desc">Age at notification (as recorded)</div><div id="age" class="chart"></div></article><article class="card"><h3>Sex distribution</h3><div class="desc">Male and female notified records</div><div id="sex"></div></article><article class="card"><h3>Nationality</h3><div class="desc">Citizenship status</div><div id="citizenship"></div></article></div>
-<div class="section"><div><h2>Clinical & treatment outcomes</h2><p>Broad diagnostic groups and recorded final outcomes</p></div></div>
-<div class="grid three"><article class="card"><h3>TB classification</h3><div class="desc">Pulmonary versus extrapulmonary grouping</div><div id="type"></div></article><article class="card span2"><h3>Treatment outcome distribution</h3><div class="desc">Outcome coding retained; cured and completed shown separately</div><div id="outcome"></div></article></div>
-<div class="section"><div><h2>Geographical distribution</h2><p>Notifications by recorded mukim and locality, not population-adjusted rates</p></div></div>
-<div class="grid"><article class="card"><h3>Cases by mukim</h3><div class="desc">Highest-notification mukim first</div><div id="mukim"></div></article><article class="card"><h3>Locality concentration</h3><div class="desc">Only localities with ≥3 cases in the full source data are named</div><div id="locality"></div><div class="quiet">Small localities are combined to reduce re-identification risk.</div></article></div>
-<div class="section"><div><h2>Mukim performance</h2><p>Counts of case notifications, deaths and treatment completion</p></div></div>
-<div class="grid"><article class="card span2"><div class="tablewrap"><table><thead><tr><th>Mukim</th><th>Cases</th><th>Deaths</th><th>Success*</th><th>Success %*</th></tr></thead><tbody id="mukimTable"></tbody></table></div><div class="quiet">*Crude cured + completed share among displayed records, not a formally defined WHO treatment cohort measure. Small cell counts require caution.</div></article></div>
-<div class="section"><div><h2>Data quality & interpretation</h2><p>Essential checks before district reporting and epidemiological inference</p></div></div>
-<div class="grid"><article class="card"><h3>Completeness review</h3><div id="quality"></div></article><article class="card"><h3>Key analytical cautions</h3><div class="callout">Counts describe notified records, not incidence or prevalence. Comparing areas or demographic groups requires suitable population denominators.</div><div class="callout warning">Outcome percentages are unadjusted proportions of the selected records. Treatment cohorts, outcome follow-up periods, and exclusions should be verified before official reporting.</div><div class="callout">The 2020 monthly pattern should not be interpreted as evidence of COVID-19 effects without external diagnostic-service and historical data.</div></article></div>
-<div class="notes">Source: provided workbook “SABAH-TUARAN-TUARAN-TBIS101A-2020.xlsx” (185 records). Dataset is de-identified in this HTML: patient names, dates of birth, street addresses and coordinates are excluded. Diagnostic labels are grouped analytically: pulmonary includes explicit PTB / pulmonary / MDRTB labels; other TB sites are classified as extrapulmonary. “MDRTB” is not sufficient on its own to determine anatomical site and is grouped under pulmonary provisionally; verify against the source record.</div>
-<div class="footer">TUARAN · TB SURVEILLANCE DASHBOARD <span style="float:right">Prepared for descriptive public health review · Offline responsive HTML</span></div></main></div>
-<script>const DATA=[{"age":47,"sex":"Female","citizenship":"Malaysian","mukim":"TOPOKON","locality":"RONGOLIS","date":"2020-01-15","outcome":"Cured","type":"Pulmonary TB","ageBand":"45–64","year":"2020","month":"01"},{"age":33,"sex":"Female","citizenship":"Malaysian","mukim":"KIULU","locality":"TAMAN TELIPOK RIA","date":"2020-01-15","outcome":"Completed","type":"Pulmonary TB","ageBand":"25–44","year":"2020","month":"01"},{"age":68,"sex":"Male","citizenship":"Non-Malaysian","mukim":"KIULU","locality":"TAMAN TELIPOK RIA","date":"2020-01-16","outcome":"Completed","type":"Pulmonary TB","ageBand":"65+","year":"2020","month":"01"},{"age":72,"sex":"Female","citizenship":"Malaysian","mukim":"TOPOKON","locality":"WANGKOB","date":"2020-01-17","outcome":"Completed","type":"Extrapulmonary TB","ageBand":"65+","year":"2020","month":"01"},{"age":16,"sex":"Male","citizenship":"Malaysian","mukim":"KIULU","locality":"TAMAN TELIPOK RIA","date":"2020-01-31","outcome":"Completed","type":"Pulmonary TB","ageBand":"15–24","year":"2020","month":"01"},{"age":32,"sex":"Male","citizenship":"Malaysian","mukim":"TAMBALANG","locality":"Not recorded","date":"2020-01-31","outcome":"Cured","type":"Pulmonary TB","ageBand":"25–44","year":"2020","month":"01"},{"age":49,"sex":"Male","citizenship":"Malaysian","mukim":"TENGAH","locality":"RANGALAU LAMA","date":"2020-02-03","outcome":"Completed","type":"Extrapulmonary TB","ageBand":"45–64","year":"2020","month":"02"},{"age":53,"sex":"Female","citizenship":"Malaysian","mukim":"KIULU","locality":"Not recorded","date":"2020-02-04","outcome":"Died","type":"Pulmonary TB","ageBand":"45–64","year":"2020","month":"02"},{"age":24,"sex":"Male","citizenship":"Malaysian","mukim":"KIULU","locality":"Not recorded","date":"2020-02-04","outcome":"Cured","type":"Pulmonary TB","ageBand":"15–24","year":"2020","month":"02"},{"age":17,"sex":"Male","citizenship":"Malaysian","mukim":"KIULU","locality":"TAMAN TELIPOK RIA","date":"2020-02-05","outcome":"Cured","type":"Pulmonary TB","ageBand":"15–24","year":"2020","month":"02"},{"age":60,"sex":"Male","citizenship":"Malaysian","mukim":"BATANGAN","locality":"BOLONG LAMA","date":"2020-02-06","outcome":"Completed","type":"Pulmonary TB","ageBand":"45–64","year":"2020","month":"02"},{"age":50,"sex":"Male","citizenship":"Malaysian","mukim":"SERUSOP","locality":"SERUSOP","date":"2020-02-13","outcome":"Completed","type":"Pulmonary TB","ageBand":"45–64","year":"2020","month":"02"},{"age":62,"sex":"Female","citizenship":"Non-Malaysian","mukim":"KIULU","locality":"Not recorded","date":"2020-02-16","outcome":"Cured","type":"Pulmonary TB","ageBand":"45–64","year":"2020","month":"02"},{"age":22,"sex":"Male","citizenship":"Malaysian","mukim":"TOPOKON","locality":"Not recorded","date":"2020-02-17","outcome":"Cured","type":"Pulmonary TB","ageBand":"15–24","year":"2020","month":"02"},{"age":63,"sex":"Female","citizenship":"Malaysian","mukim":"TAMBALANG","locality":"TAMBALANG","date":"2020-02-17","outcome":"Completed","type":"Pulmonary TB","ageBand":"45–64","year":"2020","month":"02"},{"age":16,"sex":"Male","citizenship":"Malaysian","mukim":"TOPOKON","locality":"PITAS","date":"2020-02-21","outcome":"Completed","type":"Pulmonary TB","ageBand":"15–24","year":"2020","month":"02"},{"age":78,"sex":"Female","citizenship":"Malaysian","mukim":"MANGKALADOI","locality":"KOPORINGAN","date":"2020-02-21","outcome":"Completed","type":"Pulmonary TB","ageBand":"65+","year":"2020","month":"02"},{"age":71,"sex":"Male","citizenship":"Malaysian","mukim":"MARABAHAI","locality":"LAKANG","date":"2020-04-09","outcome":"Completed","type":"Extrapulmonary TB","ageBand":"65+","year":"2020","month":"04"},{"age":31,"sex":"Male","citizenship":"Malaysian","mukim":"TAMPARULI","locality":"TANGKORANGOH","date":"2020-04-17","outcome":"Cured","type":"Pulmonary TB","ageBand":"25–44","year":"2020","month":"04"},{"age":27,"sex":"Female","citizenship":"Malaysian","mukim":"BATANGAN","locality":"BOLONG LAMA","date":"2020-04-21","outcome":"Cured","type":"Pulmonary TB","ageBand":"25–44","year":"2020","month":"04"},{"age":35,"sex":"Male","citizenship":"Malaysian","mukim":"TENGHILAN","locality":"RANI","date":"2020-04-28","outcome":"Completed","type":"Pulmonary TB","ageBand":"25–44","year":"2020","month":"04"},{"age":43,"sex":"Female","citizenship":"Malaysian","mukim":"SERUSOP","locality":"PANIMBAWON","date":"2020-04-29","outcome":"Cured","type":"Pulmonary TB","ageBand":"25–44","year":"2020","month":"04"},{"age":54,"sex":"Male","citizenship":"Non-Malaysian","mukim":"KIULU","locality":"Not recorded","date":"2020-05-05","outcome":"Cured","type":"Pulmonary TB","ageBand":"45–64","year":"2020","month":"05"},{"age":26,"sex":"Female","citizenship":"Malaysian","mukim":"KIULU","locality":"Not recorded","date":"2020-05-04","outcome":"Cured","type":"Pulmonary TB","ageBand":"25–44","year":"2020","month":"05"},{"age":54,"sex":"Male","citizenship":"Malaysian","mukim":"KIULU","locality":"TAMAN TELIPOK RIA","date":"2019-12-26","outcome":"Completed","type":"Pulmonary TB","ageBand":"45–64","year":"2019","month":"12"},{"age":24,"sex":"Female","citizenship":"Malaysian","mukim":"TENGAH","locality":"RANGALAU LAMA","date":"2019-12-30","outcome":"Cured","type":"Pulmonary TB","ageBand":"15–24","year":"2019","month":"12"},{"age":33,"sex":"Male","citizenship":"Malaysian","mukim":"BATANGAN","locality":"KOTA","date":"2019-12-30","outcome":"Cured","type":"Pulmonary TB","ageBand":"25–44","year":"2019","month":"12"},{"age":50,"sex":"Male","citizenship":"Malaysian","mukim":"BATANGAN","locality":"KOTA","date":"2019-12-26","outcome":"Cured","type":"Pulmonary TB","ageBand":"45–64","year":"2019","month":"12"},{"age":24,"sex":"Male","citizenship":"Malaysian","mukim":"SELUPUH","locality":"Not recorded","date":"2020-01-03","outcome":"Cured","type":"Pulmonary TB","ageBand":"15–24","year":"2020","month":"01"},{"age":33,"sex":"Female","citizenship":"Non-Malaysian","mukim":"KIULU","locality":"Not recorded","date":"2020-02-10","outcome":"Cured","type":"Pulmonary TB","ageBand":"25–44","year":"2020","month":"02"},{"age":75,"sex":"Female","citizenship":"Malaysian","mukim":"BATANGAN","locality":"BARUS","date":"2020-02-11","outcome":"Completed","type":"Pulmonary TB","ageBand":"65+","year":"2020","month":"02"},{"age":63,"sex":"Male","citizenship":"Malaysian","mukim":"TENGAH","locality":"MALANGANG LAMA","date":"2020-02-13","outcome":"Completed","type":"Pulmonary TB","ageBand":"45–64","year":"2020","month":"02"},{"age":42,"sex":"Male","citizenship":"Malaysian","mukim":"KIULU","locality":"NONGKOLUD","date":"2020-02-20","outcome":"Completed","type":"Pulmonary TB","ageBand":"25–44","year":"2020","month":"02"},{"age":51,"sex":"Female","citizenship":"Malaysian","mukim":"KIULU","locality":"GILING LAUT","date":"2020-02-21","outcome":"Completed","type":"Pulmonary TB","ageBand":"45–64","year":"2020","month":"02"},{"age":22,"sex":"Female","citizenship":"Malaysian","mukim":"SERUSOP","locality":"KG. TAJAU","date":"2020-02-24","outcome":"Cured","type":"Pulmonary TB","ageBand":"15–24","year":"2020","month":"02"},{"age":25,"sex":"Female","citizenship":"Malaysian","mukim":"KIULU","locality":"Not recorded","date":"2020-02-25","outcome":"Completed","type":"Extrapulmonary TB","ageBand":"25–44","year":"2020","month":"02"},{"age":28,"sex":"Male","citizenship":"Malaysian","mukim":"SERUSOP","locality":"SERUSOP","date":"2020-02-25","outcome":"Died","type":"Pulmonary TB","ageBand":"25–44","year":"2020","month":"02"},{"age":40,"sex":"Male","citizenship":"Malaysian","mukim":"TAMPARULI","locality":"TELIBONG","date":"2020-02-25","outcome":"Completed","type":"Pulmonary TB","ageBand":"25–44","year":"2020","month":"02"},{"age":29,"sex":"Male","citizenship":"Malaysian","mukim":"MARABAHAI","locality":"TAGAS","date":"2020-02-27","outcome":"Completed","type":"Pulmonary TB","ageBand":"25–44","year":"2020","month":"02"},{"age":52,"sex":"Male","citizenship":"Malaysian","mukim":"BERUNGIS","locality":"JEMBULANG","date":"2020-02-29","outcome":"Cured","type":"Pulmonary TB","ageBand":"45–64","year":"2020","month":"02"},{"age":9,"sex":"Male","citizenship":"Malaysian","mukim":"LEMBAH","locality":"TOGINAMBUR","date":"2020-06-02","outcome":"Completed","type":"Pulmonary TB","ageBand":"0–14","year":"2020","month":"06"},{"age":22,"sex":"Female","citizenship":"Malaysian","mukim":"KIULU","locality":"TAMAN TELIPOK RIA","date":"2020-06-03","outcome":"Cured","type":"Pulmonary TB","ageBand":"15–24","year":"2020","month":"06"},{"age":38,"sex":"Female","citizenship":"Non-Malaysian","mukim":"KIULU","locality":"TAMAN TELIPOK RIA","date":"2020-06-03","outcome":"Cured","type":"Pulmonary TB","ageBand":"25–44","year":"2020","month":"06"},{"age":41,"sex":"Male","citizenship":"Malaysian","mukim":"SERUSOP","locality":"PENAMPANG BARU","date":"2020-06-04","outcome":"Completed","type":"Extrapulmonary TB","ageBand":"25–44","year":"2020","month":"06"},{"age":24,"sex":"Female","citizenship":"Malaysian","mukim":"MENGKABONG","locality":"MEMPELAN","date":"2020-06-05","outcome":"Completed","type":"Extrapulmonary TB","ageBand":"15–24","year":"2020","month":"06"},{"age":50,"sex":"Male","citizenship":"Malaysian","mukim":"TAMPARULI","locality":"TAMPARULI","date":"2020-06-09","outcome":"Completed","type":"Extrapulmonary TB","ageBand":"45–64","year":"2020","month":"06"},{"age":37,"sex":"Male","citizenship":"Non-Malaysian","mukim":"BATANGAN","locality":"BATANGAN","date":"2020-06-19","outcome":"Completed","type":"Pulmonary TB","ageBand":"25–44","year":"2020","month":"06"},{"age":41,"sex":"Male","citizenship":"Non-Malaysian","mukim":"KIULU","locality":"TAMAN TELIPOK RIA","date":"2020-06-21","outcome":"Completed","type":"Pulmonary TB","ageBand":"25–44","year":"2020","month":"06"},{"age":39,"sex":"Female","citizenship":"Malaysian","mukim":"SERUSOP","locality":"PANIMBAWON","date":"2020-01-03","outcome":"Cured","type":"Pulmonary TB","ageBand":"25–44","year":"2020","month":"01"},{"age":57,"sex":"Female","citizenship":"Malaysian","mukim":"TENGHILAN","locality":"KG. TENGHILAN","date":"2020-01-06","outcome":"Completed","type":"Pulmonary TB","ageBand":"45–64","year":"2020","month":"01"},{"age":21,"sex":"Male","citizenship":"Non-Malaysian","mukim":"BATANGAN","locality":"DUNGUN","date":"2020-01-07","outcome":"Cured","type":"Pulmonary TB","ageBand":"15–24","year":"2020","month":"01"},{"age":60,"sex":"Male","citizenship":"Malaysian","mukim":"KIULU","locality":"TAMAN TELIPOK RIA","date":"2020-01-07","outcome":"Completed","type":"Pulmonary TB","ageBand":"45–64","year":"2020","month":"01"},{"age":46,"sex":"Male","citizenship":"Non-Malaysian","mukim":"KIULU","locality":"Not recorded","date":"2020-01-08","outcome":"Cured","type":"Pulmonary TB","ageBand":"45–64","year":"2020","month":"01"},{"age":22,"sex":"Female","citizenship":"Malaysian","mukim":"KIULU","locality":"TAMAN TELIPOK RIA","date":"2020-01-08","outcome":"Died","type":"Pulmonary TB","ageBand":"15–24","year":"2020","month":"01"},{"age":55,"sex":"Male","citizenship":"Malaysian","mukim":"TENGHILAN","locality":"SAMBAH","date":"2020-01-09","outcome":"Cured","type":"Pulmonary TB","ageBand":"45–64","year":"2020","month":"01"},{"age":23,"sex":"Male","citizenship":"Malaysian","mukim":"SERUSOP","locality":"BARU-BARU","date":"2020-01-10","outcome":"Cured","type":"Pulmonary TB","ageBand":"15–24","year":"2020","month":"01"},{"age":31,"sex":"Male","citizenship":"Non-Malaysian","mukim":"KIULU","locality":"Not recorded","date":"2020-01-10","outcome":"Cured","type":"Pulmonary TB","ageBand":"25–44","year":"2020","month":"01"},{"age":49,"sex":"Male","citizenship":"Malaysian","mukim":"KIULU","locality":"TAMAN TELIPOK RIA","date":"2020-01-10","outcome":"Cured","type":"Pulmonary TB","ageBand":"45–64","year":"2020","month":"01"},{"age":34,"sex":"Male","citizenship":"Malaysian","mukim":"BERUNGIS","locality":"BERUNGIS","date":"2020-01-10","outcome":"Cured","type":"Pulmonary TB","ageBand":"25–44","year":"2020","month":"01"},{"age":44,"sex":"Female","citizenship":"Non-Malaysian","mukim":"MARABAHAI","locality":"TAGAS","date":"2020-03-29","outcome":"Cured","type":"Pulmonary TB","ageBand":"25–44","year":"2020","month":"03"},{"age":47,"sex":"Male","citizenship":"Malaysian","mukim":"TAMBALANG","locality":"LAYA-LAYA","date":"2020-03-31","outcome":"Cured","type":"Pulmonary TB","ageBand":"45–64","year":"2020","month":"03"},{"age":52,"sex":"Female","citizenship":"Malaysian","mukim":"MENGKABONG","locality":"GERINSING","date":"2020-04-02","outcome":"Cured","type":"Pulmonary TB","ageBand":"45–64","year":"2020","month":"04"},{"age":60,"sex":"Female","citizenship":"Non-Malaysian","mukim":"BERUNGIS","locality":"BERUNGIS","date":"2020-04-03","outcome":"Cured","type":"Pulmonary TB","ageBand":"45–64","year":"2020","month":"04"},{"age":63,"sex":"Male","citizenship":"Non-Malaysian","mukim":"KIULU","locality":"TELIPOK SQUARE","date":"2020-04-06","outcome":"Died","type":"Pulmonary TB","ageBand":"45–64","year":"2020","month":"04"},{"age":29,"sex":"Male","citizenship":"Malaysian","mukim":"KIULU","locality":"TAMAN TELIPOK RIA","date":"2020-04-08","outcome":"Completed","type":"Extrapulmonary TB","ageBand":"25–44","year":"2020","month":"04"},{"age":68,"sex":"Male","citizenship":"Malaysian","mukim":"TENGAH","locality":"Not recorded","date":"2020-07-01","outcome":"Cured","type":"Pulmonary TB","ageBand":"65+","year":"2020","month":"07"},{"age":22,"sex":"Female","citizenship":"Malaysian","mukim":"SELUPUH","locality":"Not recorded","date":"2020-07-02","outcome":"Cured","type":"Pulmonary TB","ageBand":"15–24","year":"2020","month":"07"},{"age":21,"sex":"Male","citizenship":"Malaysian","mukim":"KIULU","locality":"KARAMBUNAI BARU","date":"2020-07-07","outcome":"Cured","type":"Pulmonary TB","ageBand":"15–24","year":"2020","month":"07"},{"age":18,"sex":"Male","citizenship":"Malaysian","mukim":"SELUPUH","locality":"SELUPUH","date":"2020-07-09","outcome":"Cured","type":"Pulmonary TB","ageBand":"15–24","year":"2020","month":"07"},{"age":49,"sex":"Male","citizenship":"Malaysian","mukim":"TENGAH","locality":"KITAPOL","date":"2020-07-09","outcome":"Cured","type":"Pulmonary TB","ageBand":"45–64","year":"2020","month":"07"},{"age":58,"sex":"Male","citizenship":"Malaysian","mukim":"TENGAH","locality":"Not recorded","date":"2020-07-13","outcome":"Completed","type":"Extrapulmonary TB","ageBand":"45–64","year":"2020","month":"07"},{"age":38,"sex":"Female","citizenship":"Malaysian","mukim":"SERUSOP","locality":"SERUSOP","date":"2020-07-09","outcome":"Completed","type":"Extrapulmonary TB","ageBand":"25–44","year":"2020","month":"07"},{"age":46,"sex":"Male","citizenship":"Malaysian","mukim":"TOPOKON","locality":"RUNGUS","date":"2019-12-19","outcome":"Cured","type":"Pulmonary TB","ageBand":"45–64","year":"2019","month":"12"},{"age":73,"sex":"Male","citizenship":"Malaysian","mukim":"TENGAH","locality":"LOGUB","date":"2019-12-23","outcome":"Completed","type":"Extrapulmonary TB","ageBand":"65+","year":"2019","month":"12"},{"age":57,"sex":"Male","citizenship":"Malaysian","mukim":"ULU","locality":"PORING","date":"2019-12-23","outcome":"Completed","type":"Pulmonary TB","ageBand":"45–64","year":"2019","month":"12"},{"age":58,"sex":"Female","citizenship":"Malaysian","mukim":"TENGHILAN","locality":"Not recorded","date":"2020-01-20","outcome":"Cured","type":"Pulmonary TB","ageBand":"45–64","year":"2020","month":"01"},{"age":58,"sex":"Male","citizenship":"Malaysian","mukim":"SELUPUH","locality":"BARU SALAUD","date":"2020-01-22","outcome":"Cured","type":"Pulmonary TB","ageBand":"45–64","year":"2020","month":"01"},{"age":47,"sex":"Male","citizenship":"Malaysian","mukim":"TENGHILAN","locality":"SARADAN LAUT","date":"2020-01-22","outcome":"Completed","type":"Extrapulmonary TB","ageBand":"45–64","year":"2020","month":"01"},{"age":43,"sex":"Female","citizenship":"Malaysian","mukim":"TAMPARULI","locality":"BONTOI","date":"2020-01-22","outcome":"Completed","type":"Pulmonary TB","ageBand":"25–44","year":"2020","month":"01"},{"age":12,"sex":"Male","citizenship":"Malaysian","mukim":"BERUNGIS","locality":"BERUNGIS","date":"2020-01-22","outcome":"Cured","type":"Pulmonary TB","ageBand":"0–14","year":"2020","month":"01"},{"age":52,"sex":"Female","citizenship":"Malaysian","mukim":"MARABAHAI","locality":"TAGAS","date":"2020-01-23","outcome":"Cured","type":"Pulmonary TB","ageBand":"45–64","year":"2020","month":"01"},{"age":44,"sex":"Male","citizenship":"Malaysian","mukim":"MENGKABONG","locality":"PENSURAN","date":"2020-01-28","outcome":"Died","type":"Pulmonary TB","ageBand":"25–44","year":"2020","month":"01"},{"age":45,"sex":"Male","citizenship":"Malaysian","mukim":"KIULU","locality":"TELIPOK JAYA  BT. 15","date":"2020-03-03","outcome":"Cured","type":"Pulmonary TB","ageBand":"45–64","year":"2020","month":"03"},{"age":50,"sex":"Male","citizenship":"Malaysian","mukim":"TAMBALANG","locality":"LOK BATIK","date":"2020-03-05","outcome":"Completed","type":"Pulmonary TB","ageBand":"45–64","year":"2020","month":"03"},{"age":33,"sex":"Male","citizenship":"Malaysian","mukim":"KIULU","locality":"Not recorded","date":"2020-03-07","outcome":"Completed","type":"Extrapulmonary TB","ageBand":"25–44","year":"2020","month":"03"},{"age":73,"sex":"Male","citizenship":"Malaysian","mukim":"KIULU","locality":"Not recorded","date":"2020-03-12","outcome":"Died","type":"Pulmonary TB","ageBand":"65+","year":"2020","month":"03"},{"age":63,"sex":"Female","citizenship":"Malaysian","mukim":"SERUSOP","locality":"PANIMBAWON","date":"2020-03-18","outcome":"Cured","type":"Pulmonary TB","ageBand":"45–64","year":"2020","month":"03"},{"age":43,"sex":"Male","citizenship":"Non-Malaysian","mukim":"MARABAHAI","locality":"LAKANG","date":"2020-03-23","outcome":"Cured","type":"Pulmonary TB","ageBand":"25–44","year":"2020","month":"03"},{"age":56,"sex":"Female","citizenship":"Non-Malaysian","mukim":"TAMBALANG","locality":"LOK BATIK","date":"2020-03-24","outcome":"Completed","type":"Pulmonary TB","ageBand":"45–64","year":"2020","month":"03"},{"age":54,"sex":"Male","citizenship":"Malaysian","mukim":"BATANGAN","locality":"BARUS","date":"2020-03-24","outcome":"Cured","type":"Pulmonary TB","ageBand":"45–64","year":"2020","month":"03"},{"age":69,"sex":"Male","citizenship":"Malaysian","mukim":"BERUNGIS","locality":"BERUNGIS","date":"2020-06-10","outcome":"Cured","type":"Pulmonary TB","ageBand":"65+","year":"2020","month":"06"},{"age":43,"sex":"Female","citizenship":"Non-Malaysian","mukim":"BERUNGIS","locality":"BERUNGIS","date":"2020-06-10","outcome":"Cured","type":"Pulmonary TB","ageBand":"25–44","year":"2020","month":"06"},{"age":17,"sex":"Male","citizenship":"Malaysian","mukim":"TAMBALANG","locality":"TAMBALANG","date":"2020-06-15","outcome":"Cured","type":"Pulmonary TB","ageBand":"15–24","year":"2020","month":"06"},{"age":36,"sex":"Female","citizenship":"Malaysian","mukim":"KIULU","locality":"Not recorded","date":"2020-06-15","outcome":"Cured","type":"Pulmonary TB","ageBand":"25–44","year":"2020","month":"06"},{"age":50,"sex":"Male","citizenship":"Malaysian","mukim":"KIULU","locality":"TAMAN TELIPOK RIA","date":"2020-06-18","outcome":"Completed","type":"Pulmonary TB","ageBand":"45–64","year":"2020","month":"06"},{"age":51,"sex":"Male","citizenship":"Malaysian","mukim":"KIULU","locality":"Not recorded","date":"2020-07-16","outcome":"Cured","type":"Pulmonary TB","ageBand":"45–64","year":"2020","month":"07"},{"age":40,"sex":"Male","citizenship":"Non-Malaysian","mukim":"KIULU","locality":"TAMAN TELIPOK RIA","date":"2020-08-13","outcome":"Transferred / lost","type":"Pulmonary TB","ageBand":"25–44","year":"2020","month":"08"},{"age":24,"sex":"Female","citizenship":"Non-Malaysian","mukim":"KIULU","locality":"TAMAN TELIPOK RIA","date":"2020-08-17","outcome":"Cured","type":"Pulmonary TB","ageBand":"15–24","year":"2020","month":"08"},{"age":29,"sex":"Female","citizenship":"Malaysian","mukim":"SERUSOP","locality":"BARU-BARU","date":"2020-08-21","outcome":"Cured","type":"Pulmonary TB","ageBand":"25–44","year":"2020","month":"08"},{"age":45,"sex":"Female","citizenship":"Malaysian","mukim":"SERUSOP","locality":"SERUSOP","date":"2020-08-24","outcome":"Cured","type":"Pulmonary TB","ageBand":"45–64","year":"2020","month":"08"},{"age":66,"sex":"Male","citizenship":"Malaysian","mukim":"KIULU","locality":"TAMAN TELIPOK RIA","date":"2020-08-25","outcome":"Died","type":"Pulmonary TB","ageBand":"65+","year":"2020","month":"08"},{"age":43,"sex":"Male","citizenship":"Malaysian","mukim":"TAMBALANG","locality":"LOK BATIK","date":"2020-08-26","outcome":"Completed","type":"Extrapulmonary TB","ageBand":"25–44","year":"2020","month":"08"},{"age":37,"sex":"Female","citizenship":"Malaysian","mukim":"MARABAHAI","locality":"Not recorded","date":"2020-08-26","outcome":"Cured","type":"Pulmonary TB","ageBand":"25–44","year":"2020","month":"08"},{"age":54,"sex":"Male","citizenship":"Malaysian","mukim":"BATANGAN","locality":"BARUS","date":"2020-08-27","outcome":"Cured","type":"Pulmonary TB","ageBand":"45–64","year":"2020","month":"08"},{"age":67,"sex":"Male","citizenship":"Malaysian","mukim":"PEKAN NABALU","locality":"KELAWAT","date":"2020-08-27","outcome":"Completed","type":"Extrapulmonary TB","ageBand":"65+","year":"2020","month":"08"},{"age":57,"sex":"Male","citizenship":"Malaysian","mukim":"BERUNGIS","locality":"JEMBULANG","date":"2020-07-20","outcome":"Cured","type":"Pulmonary TB","ageBand":"45–64","year":"2020","month":"07"},{"age":53,"sex":"Male","citizenship":"Malaysian","mukim":"TENGHILAN","locality":"TINUHAN","date":"2020-07-21","outcome":"Cured","type":"Pulmonary TB","ageBand":"45–64","year":"2020","month":"07"},{"age":3,"sex":"Male","citizenship":"Malaysian","mukim":"KIULU","locality":"TAMAN TELIPOK RIA","date":"2020-07-22","outcome":"Completed","type":"Pulmonary TB","ageBand":"0–14","year":"2020","month":"07"},{"age":26,"sex":"Female","citizenship":"Malaysian","mukim":"KIULU","locality":"NONGKOLUD","date":"2020-09-01","outcome":"Cured","type":"Pulmonary TB","ageBand":"25–44","year":"2020","month":"09"},{"age":34,"sex":"Male","citizenship":"Malaysian","mukim":"MENGKABONG","locality":"SUANG PERUMAHAN","date":"2020-09-03","outcome":"Cured","type":"Pulmonary TB","ageBand":"25–44","year":"2020","month":"09"},{"age":60,"sex":"Female","citizenship":"Malaysian","mukim":"KIULU","locality":"BUKIT PAYONG","date":"2020-09-04","outcome":"Cured","type":"Pulmonary TB","ageBand":"45–64","year":"2020","month":"09"},{"age":49,"sex":"Male","citizenship":"Malaysian","mukim":"KIULU","locality":"TAMAN TELIPOK RIA","date":"2020-09-04","outcome":"Died","type":"Extrapulmonary TB","ageBand":"45–64","year":"2020","month":"09"},{"age":34,"sex":"Male","citizenship":"Non-Malaysian","mukim":"KIULU","locality":"TAMAN TELIPOK RIA","date":"2020-09-06","outcome":"Completed","type":"Extrapulmonary TB","ageBand":"25–44","year":"2020","month":"09"},{"age":28,"sex":"Male","citizenship":"Malaysian","mukim":"KIULU","locality":"SUPERWOOD INDUSTRIES","date":"2020-09-07","outcome":"Cured","type":"Pulmonary TB","ageBand":"25–44","year":"2020","month":"09"},{"age":61,"sex":"Male","citizenship":"Malaysian","mukim":"MENGKABONG","locality":"TEMBILOK","date":"2020-09-07","outcome":"Completed","type":"Extrapulmonary TB","ageBand":"45–64","year":"2020","month":"09"},{"age":57,"sex":"Male","citizenship":"Malaysian","mukim":"TAMPARULI","locality":"TELIBONG","date":"2020-05-07","outcome":"Cured","type":"Pulmonary TB","ageBand":"45–64","year":"2020","month":"05"},{"age":68,"sex":"Male","citizenship":"Malaysian","mukim":"BATANGAN","locality":"DUNGANG","date":"2020-05-08","outcome":"Died","type":"Pulmonary TB","ageBand":"65+","year":"2020","month":"05"},{"age":39,"sex":"Male","citizenship":"Malaysian","mukim":"MANGKALADOI","locality":"TOGOP","date":"2020-05-13","outcome":"Cured","type":"Pulmonary TB","ageBand":"25–44","year":"2020","month":"05"},{"age":32,"sex":"Male","citizenship":"Malaysian","mukim":"KIULU","locality":"GILING LAUT","date":"2020-05-18","outcome":"Failure","type":"Pulmonary TB","ageBand":"25–44","year":"2020","month":"05"},{"age":69,"sex":"Male","citizenship":"Malaysian","mukim":"TOPOKON","locality":"RONGOLIS","date":"2020-05-22","outcome":"Died","type":"Pulmonary TB","ageBand":"65+","year":"2020","month":"05"},{"age":40,"sex":"Male","citizenship":"Non-Malaysian","mukim":"KIULU","locality":"TAMAN TELIPOK RIA","date":"2020-05-27","outcome":"Cured","type":"Pulmonary TB","ageBand":"25–44","year":"2020","month":"05"},{"age":64,"sex":"Male","citizenship":"Malaysian","mukim":"TENGHILAN","locality":"LAPASAN","date":"2020-05-28","outcome":"Cured","type":"Pulmonary TB","ageBand":"45–64","year":"2020","month":"05"},{"age":19,"sex":"Male","citizenship":"Malaysian","mukim":"KIULU","locality":"Not recorded","date":"2020-05-29","outcome":"Cured","type":"Pulmonary TB","ageBand":"15–24","year":"2020","month":"05"},{"age":29,"sex":"Male","citizenship":"Non-Malaysian","mukim":"KIULU","locality":"TAMAN TELIPOK RIA","date":"2020-09-07","outcome":"Cured","type":"Pulmonary TB","ageBand":"25–44","year":"2020","month":"09"},{"age":36,"sex":"Male","citizenship":"Malaysian","mukim":"SERUSOP","locality":"SUDOT","date":"2020-09-07","outcome":"Completed","type":"Extrapulmonary TB","ageBand":"25–44","year":"2020","month":"09"},{"age":78,"sex":"Male","citizenship":"Malaysian","mukim":"TAMPARULI","locality":"PEKAN TAMPARULI","date":"2020-09-04","outcome":"Cured","type":"Pulmonary TB","ageBand":"65+","year":"2020","month":"09"},{"age":50,"sex":"Male","citizenship":"Malaysian","mukim":"TENGHILAN","locality":"Not recorded","date":"2020-09-10","outcome":"Cured","type":"Pulmonary TB","ageBand":"45–64","year":"2020","month":"09"},{"age":44,"sex":"Male","citizenship":"Malaysian","mukim":"KIULU","locality":"GAYANG","date":"2020-09-15","outcome":"Cured","type":"Pulmonary TB","ageBand":"25–44","year":"2020","month":"09"},{"age":50,"sex":"Male","citizenship":"Malaysian","mukim":"TENGAH","locality":"BOROMBON","date":"2020-09-18","outcome":"Cured","type":"Pulmonary TB","ageBand":"45–64","year":"2020","month":"09"},{"age":36,"sex":"Male","citizenship":"Non-Malaysian","mukim":"SELUPUH","locality":"TUTU","date":"2020-09-22","outcome":"Cured","type":"Pulmonary TB","ageBand":"25–44","year":"2020","month":"09"},{"age":27,"sex":"Male","citizenship":"Non-Malaysian","mukim":"KIULU","locality":"GAYANG","date":"2020-09-22","outcome":"Cured","type":"Pulmonary TB","ageBand":"25–44","year":"2020","month":"09"},{"age":33,"sex":"Female","citizenship":"Malaysian","mukim":"KIULU","locality":"GILING TENGAH","date":"2020-09-22","outcome":"Cured","type":"Pulmonary TB","ageBand":"25–44","year":"2020","month":"09"},{"age":35,"sex":"Male","citizenship":"Malaysian","mukim":"SERUSOP","locality":"BARU-BARU","date":"2020-09-23","outcome":"Died","type":"Extrapulmonary TB","ageBand":"25–44","year":"2020","month":"09"},{"age":65,"sex":"Male","citizenship":"Malaysian","mukim":"TAMBALANG","locality":"SABANDAR","date":"2020-09-23","outcome":"Cured","type":"Pulmonary TB","ageBand":"65+","year":"2020","month":"09"},{"age":28,"sex":"Male","citizenship":"Non-Malaysian","mukim":"BATANGAN","locality":"BATANGAN","date":"2020-09-27","outcome":"Cured","type":"Pulmonary TB","ageBand":"25–44","year":"2020","month":"09"},{"age":42,"sex":"Male","citizenship":"Malaysian","mukim":"TAMBALANG","locality":"Not recorded","date":"2020-09-25","outcome":"Completed","type":"Extrapulmonary TB","ageBand":"25–44","year":"2020","month":"09"},{"age":35,"sex":"Female","citizenship":"Malaysian","mukim":"KIULU","locality":"BAKUT","date":"2020-09-30","outcome":"Completed","type":"Extrapulmonary TB","ageBand":"25–44","year":"2020","month":"09"},{"age":14,"sex":"Female","citizenship":"Malaysian","mukim":"KIULU","locality":"TAMAN TELIPOK RIA","date":"2020-09-30","outcome":"Cured","type":"Pulmonary TB","ageBand":"0–14","year":"2020","month":"09"},{"age":37,"sex":"Female","citizenship":"Malaysian","mukim":"KIULU","locality":"TAMAN TELIPOK RIA","date":"2020-10-01","outcome":"Cured","type":"Pulmonary TB","ageBand":"25–44","year":"2020","month":"10"},{"age":34,"sex":"Male","citizenship":"Malaysian","mukim":"TAMBALANG","locality":"Not recorded","date":"2020-06-22","outcome":"Cured","type":"Pulmonary TB","ageBand":"25–44","year":"2020","month":"06"},{"age":23,"sex":"Male","citizenship":"Malaysian","mukim":"TOPOKON","locality":"TOPOKOON","date":"2020-06-23","outcome":"Cured","type":"Pulmonary TB","ageBand":"15–24","year":"2020","month":"06"},{"age":40,"sex":"Male","citizenship":"Malaysian","mukim":"KIULU","locality":"MELALIN","date":"2020-06-25","outcome":"Died","type":"Extrapulmonary TB","ageBand":"25–44","year":"2020","month":"06"},{"age":50,"sex":"Female","citizenship":"Malaysian","mukim":"KIULU","locality":"Not recorded","date":"2020-06-26","outcome":"Completed","type":"Extrapulmonary TB","ageBand":"45–64","year":"2020","month":"06"},{"age":45,"sex":"Male","citizenship":"Non-Malaysian","mukim":"KIULU","locality":"TAMAN TELIPOK RIA","date":"2020-07-28","outcome":"Cured","type":"Pulmonary TB","ageBand":"45–64","year":"2020","month":"07"},{"age":20,"sex":"Male","citizenship":"Malaysian","mukim":"TENGAH","locality":"KITAPOL","date":"2020-08-03","outcome":"Cured","type":"Pulmonary TB","ageBand":"15–24","year":"2020","month":"08"},{"age":32,"sex":"Male","citizenship":"Malaysian","mukim":"KIULU","locality":"NONGKOLUD","date":"2020-08-07","outcome":"Cured","type":"Pulmonary TB","ageBand":"25–44","year":"2020","month":"08"},{"age":58,"sex":"Female","citizenship":"Malaysian","mukim":"KIULU","locality":"NONGKOLUD","date":"2020-08-07","outcome":"Completed","type":"Extrapulmonary TB","ageBand":"45–64","year":"2020","month":"08"},{"age":14,"sex":"Male","citizenship":"Malaysian","mukim":"KIULU","locality":"TAMAN TELIPOK RIA","date":"2020-08-10","outcome":"Died","type":"Pulmonary TB","ageBand":"0–14","year":"2020","month":"08"},{"age":null,"sex":"Male","citizenship":"Malaysian","mukim":"KIULU","locality":"Not recorded","date":"2020-08-10","outcome":"Died","type":"Pulmonary TB","ageBand":"Unknown","year":"2020","month":"08"},{"age":49,"sex":"Male","citizenship":"Malaysian","mukim":"TAMPARULI","locality":"TELIBONG","date":"2020-11-12","outcome":"Completed","type":"Pulmonary TB","ageBand":"45–64","year":"2020","month":"11"},{"age":43,"sex":"Female","citizenship":"Malaysian","mukim":"KIULU","locality":"TAMAN TELIPOK RIA","date":"2020-11-15","outcome":"Cured","type":"Pulmonary TB","ageBand":"25–44","year":"2020","month":"11"},{"age":17,"sex":"Female","citizenship":"Malaysian","mukim":"TENGHILAN","locality":"SARADAN DARAT","date":"2020-11-18","outcome":"Cured","type":"Pulmonary TB","ageBand":"15–24","year":"2020","month":"11"},{"age":53,"sex":"Female","citizenship":"Malaysian","mukim":"KIULU","locality":"Not recorded","date":"2020-11-26","outcome":"Cured","type":"Pulmonary TB","ageBand":"45–64","year":"2020","month":"11"},{"age":67,"sex":"Female","citizenship":"Malaysian","mukim":"SERUSOP","locality":"PENAMPANG BARU","date":"2020-11-27","outcome":"Died","type":"Pulmonary TB","ageBand":"65+","year":"2020","month":"11"},{"age":34,"sex":"Male","citizenship":"Malaysian","mukim":"KIULU","locality":"TAMAN TELIPOK RIA","date":"2020-11-30","outcome":"Cured","type":"Pulmonary TB","ageBand":"25–44","year":"2020","month":"11"},{"age":28,"sex":"Male","citizenship":"Non-Malaysian","mukim":"KIULU","locality":"SUPERWOOD INDUSTRIES","date":"2020-12-02","outcome":"Cured","type":"Pulmonary TB","ageBand":"25–44","year":"2020","month":"12"},{"age":47,"sex":"Female","citizenship":"Non-Malaysian","mukim":"TAMBALANG","locality":"TAMBALANG","date":"2020-12-04","outcome":"Completed","type":"Pulmonary TB","ageBand":"45–64","year":"2020","month":"12"},{"age":31,"sex":"Male","citizenship":"Non-Malaysian","mukim":"BERUNGIS","locality":"BERUNGIS","date":"2020-12-11","outcome":"Cured","type":"Pulmonary TB","ageBand":"25–44","year":"2020","month":"12"},{"age":52,"sex":"Female","citizenship":"Malaysian","mukim":"TENGHILAN","locality":"KAYANGAT","date":"2020-12-14","outcome":"Cured","type":"Pulmonary TB","ageBand":"45–64","year":"2020","month":"12"},{"age":20,"sex":"Male","citizenship":"Malaysian","mukim":"TENGAH","locality":"RANGALAU LAMA","date":"2020-12-14","outcome":"Failure","type":"Pulmonary TB","ageBand":"15–24","year":"2020","month":"12"},{"age":50,"sex":"Female","citizenship":"Malaysian","mukim":"KIULU","locality":"Not recorded","date":"2020-12-16","outcome":"Diagnosis changed","type":"Pulmonary TB","ageBand":"45–64","year":"2020","month":"12"},{"age":83,"sex":"Male","citizenship":"Malaysian","mukim":"BATANGAN","locality":"BATANGAN","date":"2020-12-18","outcome":"Died","type":"Extrapulmonary TB","ageBand":"65+","year":"2020","month":"12"},{"age":85,"sex":"Male","citizenship":"Malaysian","mukim":"KIULU","locality":"NONGKOLUD","date":"2020-12-16","outcome":"Cured","type":"Pulmonary TB","ageBand":"65+","year":"2020","month":"12"},{"age":29,"sex":"Male","citizenship":"Malaysian","mukim":"MANGKALADOI","locality":"BAMBANGAN BARU","date":"2020-12-16","outcome":"Completed","type":"Extrapulmonary TB","ageBand":"25–44","year":"2020","month":"12"},{"age":31,"sex":"Male","citizenship":"Malaysian","mukim":"KIULU","locality":"Not recorded","date":"2020-12-21","outcome":"Died","type":"Pulmonary TB","ageBand":"25–44","year":"2020","month":"12"},{"age":33,"sex":"Male","citizenship":"Non-Malaysian","mukim":"SELUPUH","locality":"LUMAWANG","date":"2020-12-23","outcome":"Cured","type":"Pulmonary TB","ageBand":"25–44","year":"2020","month":"12"},{"age":23,"sex":"Male","citizenship":"Malaysian","mukim":"KIULU","locality":"TAMBALUGU","date":"2020-12-18","outcome":"Cured","type":"Pulmonary TB","ageBand":"15–24","year":"2020","month":"12"},{"age":23,"sex":"Male","citizenship":"Malaysian","mukim":"SELUPUH","locality":"LABUAYA","date":"2020-12-21","outcome":"Completed","type":"Extrapulmonary TB","ageBand":"15–24","year":"2020","month":"12"},{"age":33,"sex":"Female","citizenship":"Malaysian","mukim":"MENGKABONG","locality":"BUANSA (LAUT MENGKABONG)","date":"2020-12-29","outcome":"Cured","type":"Pulmonary TB","ageBand":"25–44","year":"2020","month":"12"},{"age":61,"sex":"Male","citizenship":"Malaysian","mukim":"BERUNGIS","locality":"BERUNGIS","date":"2020-12-29","outcome":"Died","type":"Pulmonary TB","ageBand":"45–64","year":"2020","month":"12"},{"age":48,"sex":"Male","citizenship":"Malaysian","mukim":"TOPOKON","locality":"GAYA RATAU","date":"2020-10-06","outcome":"Cured","type":"Pulmonary TB","ageBand":"45–64","year":"2020","month":"10"},{"age":6,"sex":"Male","citizenship":"Malaysian","mukim":"LEMBAH","locality":"TOGINAMBUR","date":"2020-10-06","outcome":"Completed","type":"Pulmonary TB","ageBand":"0–14","year":"2020","month":"10"},{"age":45,"sex":"Female","citizenship":"Non-Malaysian","mukim":"KIULU","locality":"TAMAN TELIPOK RIA","date":"2020-10-07","outcome":"Cured","type":"Pulmonary TB","ageBand":"45–64","year":"2020","month":"10"},{"age":33,"sex":"Male","citizenship":"Non-Malaysian","mukim":"KIULU","locality":"Not recorded","date":"2020-10-07","outcome":"Completed","type":"Pulmonary TB","ageBand":"25–44","year":"2020","month":"10"},{"age":61,"sex":"Female","citizenship":"Malaysian","mukim":"TOPOKON","locality":"MARALAMIN","date":"2020-10-12","outcome":"Cured","type":"Pulmonary TB","ageBand":"45–64","year":"2020","month":"10"},{"age":30,"sex":"Male","citizenship":"Malaysian","mukim":"MANGKALADOI","locality":"LOPUTUNG","date":"2020-10-12","outcome":"Cured","type":"Pulmonary TB","ageBand":"25–44","year":"2020","month":"10"},{"age":41,"sex":"Male","citizenship":"Malaysian","mukim":"TAMPARULI","locality":"SUNGAI DAMIT","date":"2020-10-19","outcome":"Cured","type":"Pulmonary TB","ageBand":"25–44","year":"2020","month":"10"},{"age":23,"sex":"Male","citizenship":"Malaysian","mukim":"TUARAN/ PEKAN","locality":"PEKAN TUARAN","date":"2020-10-23","outcome":"Completed","type":"Pulmonary TB","ageBand":"15–24","year":"2020","month":"10"},{"age":23,"sex":"Female","citizenship":"Malaysian","mukim":"KIULU","locality":"Not recorded","date":"2020-10-29","outcome":"Cured","type":"Pulmonary TB","ageBand":"15–24","year":"2020","month":"10"},{"age":56,"sex":"Male","citizenship":"Malaysian","mukim":"BERUNGIS","locality":"JEMBULANG","date":"2020-11-02","outcome":"Cured","type":"Pulmonary TB","ageBand":"45–64","year":"2020","month":"11"},{"age":67,"sex":"Female","citizenship":"Malaysian","mukim":"SERUSOP","locality":"PENAMPANG BARU","date":"2020-11-04","outcome":"Failure","type":"Pulmonary TB","ageBand":"65+","year":"2020","month":"11"},{"age":36,"sex":"Female","citizenship":"Malaysian","mukim":"KIULU","locality":"PONIANG","date":"2020-11-07","outcome":"Died","type":"Extrapulmonary TB","ageBand":"25–44","year":"2020","month":"11"},{"age":44,"sex":"Male","citizenship":"Malaysian","mukim":"TENGAH","locality":"LOKUB","date":"2020-11-10","outcome":"Cured","type":"Pulmonary TB","ageBand":"25–44","year":"2020","month":"11"},{"age":23,"sex":"Male","citizenship":"Malaysian","mukim":"TAMBALANG","locality":"TAMBALANG","date":"2020-11-11","outcome":"Cured","type":"Pulmonary TB","ageBand":"15–24","year":"2020","month":"11"},{"age":53,"sex":"Female","citizenship":"Malaysian","mukim":"TENGHILAN","locality":"BUNGA","date":"2020-11-11","outcome":"Died","type":"Pulmonary TB","ageBand":"45–64","year":"2020","month":"11"}];
-const configs=[['year','Notification year',['All','2020','2019']],['sex','Sex'],['ageBand','Age group'],['citizenship','Citizenship'],['mukim','Mukim'],['type','TB type'],['outcome','Outcome']];const state={};let view=[];const $=id=>document.getElementById(id);const fmt=n=>n.toLocaleString('en-MY');const pc=(a,b)=>b?(100*a/b).toFixed(1)+'%':'0.0%';const esc=s=>String(s).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));const count=(rows,key)=>rows.reduce((o,r)=>(o[r[key]||'Unknown']=(o[r[key]||'Unknown']||0)+1,o),{});const sorted=x=>Object.entries(x).sort((a,b)=>b[1]-a[1]||a[0].localeCompare(b[0]));const W=()=>window.innerWidth;
-function makeControls(){const parent=$('controls');parent.innerHTML=configs.map(([key,label,values])=>{const opts=values||[...new Set(DATA.map(x=>x[key]))].sort((a,b)=>String(a).localeCompare(String(b)));return `<div class="ctrl"><label for="f_${key}">${label}</label><select id="f_${key}" aria-label="${label}"><option value="All">All</option>${opts.filter(x=>x!=='All').map(v=>`<option value="${esc(v)}">${esc(v)}</option>`).join('')}</select></div>`}).join('');configs.forEach(([k])=>{$('f_'+k).addEventListener('change',()=>{state[k]=$('f_'+k).value;render()})})}
-function resetFilters(){configs.forEach(([k])=>{$('f_'+k).value='All';state[k]='All'});render()}
-function filtered(){return DATA.filter(r=>configs.every(([k])=>!state[k]||state[k]==='All'||r[k]===state[k]))}
-function barList(id,items,limit=10,tint='#159d91'){let max=Math.max(1,...items.map(x=>x[1]));$(id).innerHTML=items.length?items.slice(0,limit).map(([name,n])=>`<div class="rowbar" title="${esc(name)}: ${n}"><div class="barname">${esc(name)}</div><div class="track"><div class="fill" style="width:${100*n/max}%;background:${tint}"></div></div><div class="val">${n}</div></div>`).join(''):'<div class="empty">No matching records</div>'}
-function donut(id,items,colors){let n=items.reduce((a,b)=>a+b[1],0),rot=0;const circ=2*Math.PI*63;let circles=items.map(([lab,v],i)=>{let len=n?v/n*circ:0,offset=-rot;rot+=len;return `<circle cx="80" cy="80" r="63" fill="none" stroke="${colors[i%colors.length]}" stroke-width="17" stroke-dasharray="${len} ${circ-len}" stroke-dashoffset="${offset}"/>`}).join('');$(id).innerHTML=`<div class="donutbox"><div class="donut"><svg viewBox="0 0 160 160"><circle cx="80" cy="80" r="63" fill="none" stroke="#edf2f7" stroke-width="17"/>${circles}</svg><div class="middle"><strong>${n}</strong><small>records</small></div></div><div class="details">${items.map(([lab,val],i)=>`<div class="detail"><span><i class="sw" style="background:${colors[i%colors.length]}"></i>${esc(lab)}</span><strong>${val} <em>${pc(val,n)}</em></strong></div>`).join('')}</div></div>`}
-function lineChart(id,values){const w=900,h=247,L=43,R=15,T=17,B=37,base=h-B,top=T,avail=base-top,max=Math.max(5,...values),cap=Math.ceil(max/5)*5,x=i=>L+(w-L-R)*(i/11),y=v=>base-(v/cap)*avail;let parts=[];for(let t=0;t<=4;t++){const yy=base-t/4*avail;parts.push(`<line x1="${L}" x2="${w-R}" y1="${yy}" y2="${yy}" stroke="#e9eef4"/><text x="${L-12}" y="${yy+4}" text-anchor="end" fill="#8b98a9" font-size="11">${Math.round(t/4*cap)}</text>`)}const pts=values.map((v,i)=>`${x(i)},${y(v)}`).join(' ');let area=`${L},${base} ${pts} ${x(11)},${base}`;parts.push(`<polygon points="${area}" fill="#15a99a" opacity=".10"/><polyline points="${pts}" fill="none" stroke="#0c9d90" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"/>`);const labs=['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'];values.forEach((v,i)=>{parts.push(`<circle cx="${x(i)}" cy="${y(v)}" r="5" fill="#0c9d90" stroke="#fff" stroke-width="2"><title>${labs[i]}: ${v}</title></circle><text x="${x(i)}" y="${h-12}" fill="#8b98a9" font-size="11" text-anchor="middle">${labs[i]}</text>`);if(v>0)parts.push(`<text x="${x(i)}" y="${y(v)-12}" fill="#486477" font-size="10" font-weight="700" text-anchor="middle">${v}</text>`)});$(id).innerHTML=`<svg viewBox="0 0 ${w} ${h}" role="img" aria-label="Monthly 2020 notification counts">${parts.join('')}</svg>`}
-function kpi(label,value,foot){return `<article class="kpi"><div class="label">${label}</div><div class="number">${value}</div><div class="foot">${foot}</div></article>`}
-function render(){view=filtered();const n=view.length,death=view.filter(x=>x.outcome==='Died').length,success=view.filter(x=>['Cured','Completed'].includes(x.outcome)).length,male=view.filter(x=>x.sex==='Male').length,pulm=view.filter(x=>x.type==='Pulmonary TB').length,yr=view.filter(x=>x.year==='2020').length;const match=Object.values(state).filter(x=>x&&x!=='All').length;$('active').textContent=`Showing ${fmt(n)} of ${fmt(DATA.length)} source records${match?' · '+match+' active filter'+(match>1?'s':''):''}. Values are recomputed for this selection.`;
-$('kpis').innerHTML=kpi('Total notifications',fmt(n),'All selected dates')+kpi('2020 notifications',fmt(yr),'Calendar year only')+kpi('Male patients',pc(male,n),`${male} cases`)+kpi('Recorded deaths',fmt(death),`${pc(death,n)} of records`)+kpi('Treatment success*',pc(success,n),`${success} cured or completed`)+kpi('Pulmonary TB',pc(pulm,n),`${pulm} classified records`);
-lineChart('trend',Array.from({length:12},(_,i)=>view.filter(x=>x.year==='2020'&&x.month===String(i+1).padStart(2,'0')).length));$('dateNote').textContent=`${view.filter(x=>x.year==='2019').length} selected records were notified in 2019; they are excluded from the plotted 2020 months.`;
-barList('age',['0–14','15–24','25–44','45–64','65+','Unknown'].map(s=>[s,count(view,'ageBand')[s]||0]),6);
-donut('sex',['Male','Female'].map(s=>[s,count(view,'sex')[s]||0]),['#0f9f94','#80a1bc']);donut('citizenship',['Malaysian','Non-Malaysian'].map(s=>[s,count(view,'citizenship')[s]||0]),['#0f9f94','#ecae5c']);donut('type',['Pulmonary TB','Extrapulmonary TB','Unclassified'].map(s=>[s,count(view,'type')[s]||0]).filter(x=>x[1]),['#0b9d91','#7fa7c7','#e4ae62']);
-barList('outcome',sorted(count(view,'outcome')),10,'linear-gradient(90deg,#6c90b0,#249c97)');barList('mukim',sorted(count(view,'mukim')),17);
-const globalCounts=count(DATA,'locality');const safe=view.map(r=>({...r,locality: r.locality==='Not recorded'?'Not recorded':(globalCounts[r.locality]>=3?r.locality:'Other localities (<3)')}));barList('locality',sorted(count(safe,'locality')),12);
-const table=sorted(count(view,'mukim')).map(([m,c])=>{const sub=view.filter(x=>x.mukim===m),d=sub.filter(x=>x.outcome==='Died').length,s=sub.filter(x=>['Cured','Completed'].includes(x.outcome)).length;return `<tr><td>${esc(m)}</td><td>${c}</td><td>${d}</td><td>${s}</td><td><span class="pill">${pc(s,c)}</span></td></tr>`}).join('');$('mukimTable').innerHTML=table||'<tr><td colspan="5">No records</td></tr>';
-const missingAge=view.filter(x=>x.age===null).length,missingLocality=view.filter(x=>x.locality==='Not recorded').length,old=view.filter(x=>x.year==='2019').length;const checks=[['Age missing',missingAge],['Locality not recorded',missingLocality],['Notification dates in 2019',old]];let numerator=checks.map(x=>`<div class="detail"><span>${x[0]}</span><strong>${x[1]} <em>${pc(x[1],n)}</em></strong></div>`).join('');$('quality').innerHTML=`<div class="details">${numerator}</div><div class="callout warning">Original date-of-birth completeness and duplicate-name checks require the source workbook, not this de-identified presentation file.</div>`;
-}
-function downloadCSV(){let groups=sorted(count(view,'mukim'));let rows=[['Mukim','Records','Deaths','Cured or completed','Success percentage'],...groups.map(([m,n])=>{let a=view.filter(r=>r.mukim===m);return [m,n,a.filter(x=>x.outcome==='Died').length,a.filter(x=>['Cured','Completed'].includes(x.outcome)).length,pc(a.filter(x=>['Cured','Completed'].includes(x.outcome)).length,n)]})];let txt=rows.map(row=>row.map(x=>'"'+String(x).replace(/"/g,'""')+'"').join(',')).join('\r\n');let blob=new Blob(['\ufeff'+txt],{type:'text/csv;charset=utf-8'}),url=URL.createObjectURL(blob),a=document.createElement('a');a.href=url;a.download='tuaran_tb_mukim_summary.csv';a.click();URL.revokeObjectURL(url)}
-makeControls();resetFilters();
-</script></body></html>
+<!doctype html>
+<html lang="ms">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="color-scheme" content="light">
+  <meta name="theme-color" content="#083c3b">
+  <title>Dashboard Survelan Tibi Tuaran 2020</title>
+  <style>
+    :root {
+      --ink: #142823;
+      --muted: #60716c;
+      --paper: #f5f7f4;
+      --card: #ffffff;
+      --line: #dce5e1;
+      --deep: #083c3b;
+      --teal: #0d6f67;
+      --teal-2: #21a696;
+      --mint: #dff3ec;
+      --gold: #e9aa36;
+      --coral: #d95f59;
+      --blue: #4388c8;
+      --violet: #7667c9;
+      --shadow: 0 10px 28px rgba(7, 55, 51, .08);
+      --radius: 18px;
+    }
+
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0;
+      background: var(--paper);
+      color: var(--ink);
+      font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      font-variant-numeric: tabular-nums;
+    }
+    button, select { font: inherit; }
+    button { cursor: pointer; }
+    .shell { width: min(1440px, 100%); margin: 0 auto; }
+    .hero {
+      position: relative;
+      overflow: hidden;
+      padding: max(22px, env(safe-area-inset-top)) 18px 24px;
+      color: white;
+      background:
+        radial-gradient(circle at 92% -20%, rgba(72, 203, 178, .32), transparent 36%),
+        radial-gradient(circle at -8% 115%, rgba(233, 170, 54, .18), transparent 35%),
+        linear-gradient(135deg, #062f31, #0a5550 65%, #0e6a60);
+    }
+    .hero::after {
+      content: "";
+      position: absolute;
+      right: -58px;
+      bottom: -82px;
+      width: 230px;
+      height: 230px;
+      border: 1px solid rgba(255,255,255,.12);
+      border-radius: 50%;
+      box-shadow: 0 0 0 32px rgba(255,255,255,.035), 0 0 0 70px rgba(255,255,255,.025);
+    }
+    .hero-inner { position: relative; z-index: 1; }
+    .eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 7px;
+      margin-bottom: 12px;
+      color: #bfeae0;
+      font-size: .72rem;
+      font-weight: 800;
+      letter-spacing: .13em;
+      text-transform: uppercase;
+    }
+    .eyebrow::before { content: ""; width: 20px; height: 2px; background: #5bd2bd; }
+    h1 { margin: 0; max-width: 780px; font-size: clamp(1.75rem, 7vw, 3.45rem); line-height: .98; letter-spacing: -.045em; }
+    .hero-copy { max-width: 760px; margin: 15px 0 0; color: #d6ebe7; line-height: 1.55; font-size: .93rem; }
+    .hero-meta { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 18px; }
+    .badge { display: inline-flex; align-items: center; gap: 7px; padding: 8px 11px; border: 1px solid rgba(255,255,255,.18); background: rgba(255,255,255,.09); border-radius: 999px; font-size: .75rem; font-weight: 700; backdrop-filter: blur(8px); }
+    .live-dot { width: 7px; height: 7px; border-radius: 50%; background: #6ee7b7; box-shadow: 0 0 0 4px rgba(110,231,183,.14); }
+    main { padding: 14px 12px 42px; }
+    .toolbar {
+      position: sticky;
+      top: 8px;
+      z-index: 20;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      margin-bottom: 12px;
+      padding: 8px;
+      background: rgba(255,255,255,.91);
+      border: 1px solid rgba(218,228,224,.9);
+      border-radius: 16px;
+      box-shadow: var(--shadow);
+      backdrop-filter: blur(14px);
+    }
+    .toolbar-status { min-width: 0; flex: 1; padding-left: 4px; }
+    .toolbar-status strong { display: block; font-size: .87rem; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+    .toolbar-status span { color: var(--muted); font-size: .72rem; }
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 7px;
+      min-height: 40px;
+      padding: 9px 12px;
+      border: 1px solid var(--line);
+      border-radius: 11px;
+      background: white;
+      color: var(--ink);
+      font-weight: 800;
+      font-size: .78rem;
+    }
+    .btn.primary { color: white; background: var(--teal); border-color: var(--teal); }
+    .btn svg { width: 16px; height: 16px; }
+    .desktop-label { display: none; }
+    .filter-panel {
+      display: none;
+      margin: 0 0 14px;
+      padding: 14px;
+      background: var(--card);
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+    }
+    .filter-panel.open { display: block; }
+    .filter-head { display: flex; align-items: center; justify-content: space-between; margin-bottom: 12px; }
+    .filter-head h2 { margin: 0; font-size: 1rem; }
+    .filter-head p { margin: 3px 0 0; color: var(--muted); font-size: .72rem; }
+    .filter-grid { display: grid; grid-template-columns: 1fr; gap: 10px; }
+    label.control { display: block; color: var(--muted); font-size: .7rem; font-weight: 800; letter-spacing: .04em; text-transform: uppercase; }
+    select {
+      width: 100%;
+      margin-top: 6px;
+      padding: 11px 34px 11px 11px;
+      border: 1px solid var(--line);
+      border-radius: 11px;
+      color: var(--ink);
+      background: #fbfcfb;
+      outline: none;
+    }
+    select:focus { border-color: var(--teal-2); box-shadow: 0 0 0 3px rgba(33,166,150,.12); }
+    .active-filters { display: flex; flex-wrap: wrap; gap: 7px; margin-top: 12px; }
+    .chip { padding: 6px 9px; border-radius: 999px; background: var(--mint); color: var(--deep); font-size: .7rem; font-weight: 800; }
+    .kpis { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 10px; }
+    .kpi {
+      min-width: 0;
+      padding: 14px;
+      background: var(--card);
+      border: 1px solid var(--line);
+      border-radius: 16px;
+      box-shadow: 0 6px 18px rgba(7,55,51,.045);
+    }
+    .kpi-top { display: flex; align-items: center; justify-content: space-between; gap: 8px; }
+    .kpi-icon { display: grid; place-items: center; width: 31px; height: 31px; border-radius: 10px; color: var(--teal); background: var(--mint); }
+    .kpi-icon svg { width: 16px; height: 16px; }
+    .kpi-value { margin-top: 11px; font-size: clamp(1.55rem, 7vw, 2.35rem); line-height: 1; letter-spacing: -.05em; font-weight: 850; }
+    .kpi-label { margin-top: 7px; font-size: .75rem; font-weight: 850; }
+    .kpi-sub { margin-top: 4px; color: var(--muted); font-size: .66rem; line-height: 1.35; }
+    .grid { display: grid; grid-template-columns: 1fr; gap: 12px; margin-top: 12px; }
+    .card { min-width: 0; padding: 16px; background: var(--card); border: 1px solid var(--line); border-radius: var(--radius); box-shadow: 0 6px 18px rgba(7,55,51,.045); }
+    .card-head { display: flex; align-items: flex-start; justify-content: space-between; gap: 12px; margin-bottom: 15px; }
+    .card h2 { margin: 0; font-size: 1rem; letter-spacing: -.015em; }
+    .card-desc { margin: 4px 0 0; color: var(--muted); font-size: .72rem; line-height: 1.4; }
+    .pill { flex: 0 0 auto; padding: 6px 8px; border-radius: 8px; background: #f0f5f3; color: var(--muted); font-size: .65rem; font-weight: 850; }
+    .insight { padding: 15px; color: white; background: linear-gradient(135deg, #0b4a47, #0d6f67); border: 0; }
+    .insight .card-desc { color: #d2ebe6; }
+    .insight-grid { display: grid; gap: 10px; }
+    .insight-item { padding: 12px; border: 1px solid rgba(255,255,255,.13); border-radius: 13px; background: rgba(255,255,255,.07); }
+    .insight-item span { display: block; color: #aee2d8; font-size: .65rem; font-weight: 800; text-transform: uppercase; letter-spacing: .08em; }
+    .insight-item strong { display: block; margin-top: 5px; font-size: .86rem; line-height: 1.35; }
+    .chart { width: 100%; min-height: 210px; }
+    .trend-svg { width: 100%; height: 238px; display: block; overflow: visible; }
+    .axis-label { fill: #70807b; font-size: 10px; font-family: inherit; }
+    .value-label { fill: var(--ink); font-size: 10px; font-weight: 800; font-family: inherit; }
+    .grid-line { stroke: #e7eeeb; stroke-width: 1; }
+    .trend-area { fill: url(#areaGradient); }
+    .trend-line { fill: none; stroke: var(--teal); stroke-width: 3; stroke-linecap: round; stroke-linejoin: round; }
+    .trend-point { fill: white; stroke: var(--teal); stroke-width: 2.5; }
+    .bar-list { display: grid; gap: 12px; }
+    .bar-row { display: grid; grid-template-columns: minmax(88px, 1.4fr) minmax(100px, 3fr) 50px; gap: 9px; align-items: center; }
+    .bar-name { min-width: 0; color: #334741; font-size: .72rem; font-weight: 750; line-height: 1.25; }
+    .bar-track { position: relative; height: 10px; overflow: hidden; background: #edf2f0; border-radius: 999px; }
+    .bar-fill { height: 100%; min-width: 2px; border-radius: inherit; background: linear-gradient(90deg, var(--teal), var(--teal-2)); }
+    .bar-fill.coral { background: linear-gradient(90deg, #c84c49, #e37b6d); }
+    .bar-fill.gold { background: linear-gradient(90deg, #d79828, #efc15c); }
+    .bar-value { text-align: right; font-size: .72rem; font-weight: 850; }
+    .age-row { display: grid; grid-template-columns: 62px 1fr 42px; gap: 8px; align-items: center; }
+    .stack { display: flex; height: 12px; overflow: hidden; background: #edf2f0; border-radius: 999px; }
+    .stack .male { background: var(--teal); }
+    .stack .female { background: var(--gold); }
+    .legend { display: flex; flex-wrap: wrap; gap: 12px; margin: 12px 0 0; color: var(--muted); font-size: .68rem; font-weight: 750; }
+    .legend span { display: inline-flex; align-items: center; gap: 6px; }
+    .dot { width: 8px; height: 8px; border-radius: 50%; }
+    .split { display: grid; grid-template-columns: 1fr; gap: 16px; }
+    .donut-wrap { display: grid; grid-template-columns: 116px 1fr; gap: 16px; align-items: center; }
+    .donut { position: relative; width: 116px; height: 116px; border-radius: 50%; background: conic-gradient(var(--teal) 0 var(--pct), var(--gold) var(--pct) 100%); }
+    .donut::after { content: ""; position: absolute; inset: 22px; border-radius: 50%; background: white; }
+    .donut-center { position: absolute; z-index: 1; inset: 0; display: grid; place-content: center; text-align: center; }
+    .donut-center strong { font-size: 1.35rem; }
+    .donut-center span { color: var(--muted); font-size: .61rem; }
+    .mini-list { display: grid; gap: 10px; }
+    .mini-item { display: flex; justify-content: space-between; gap: 10px; padding-bottom: 8px; border-bottom: 1px solid #edf1ef; font-size: .72rem; }
+    .mini-item:last-child { border-bottom: 0; padding-bottom: 0; }
+    .mini-name { display: flex; align-items: center; gap: 7px; color: var(--muted); }
+    .mini-value { font-weight: 850; }
+    .table-wrap { overflow-x: auto; margin: 0 -4px; padding: 0 4px 3px; }
+    table { width: 100%; min-width: 590px; border-collapse: collapse; font-size: .72rem; }
+    th { padding: 9px 8px; color: var(--muted); border-bottom: 1px solid var(--line); text-align: right; font-size: .64rem; text-transform: uppercase; letter-spacing: .04em; }
+    th:first-child, td:first-child { text-align: left; }
+    td { padding: 10px 8px; border-bottom: 1px solid #edf1ef; text-align: right; }
+    tbody tr:last-child td { border-bottom: 0; }
+    .mukim-name { font-weight: 800; }
+    .inline-bar { display: flex; align-items: center; gap: 8px; }
+    .inline-bar-track { width: 54px; height: 6px; overflow: hidden; background: #e9efed; border-radius: 999px; }
+    .inline-bar-fill { height: 100%; background: var(--teal); border-radius: inherit; }
+    .quality-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 9px; }
+    .quality-item { padding: 12px; border-radius: 13px; background: #f7f9f8; border: 1px solid #e8eeeb; }
+    .quality-item strong { display: block; font-size: 1.3rem; }
+    .quality-item span { display: block; margin-top: 4px; color: var(--muted); font-size: .66rem; line-height: 1.35; }
+    .notice { margin-top: 12px; padding: 11px 12px; border-left: 3px solid var(--gold); background: #fff8e9; color: #6e5629; font-size: .7rem; line-height: 1.5; border-radius: 0 10px 10px 0; }
+    .empty { display: grid; place-items: center; min-height: 180px; padding: 20px; border: 1px dashed var(--line); border-radius: 13px; color: var(--muted); text-align: center; font-size: .8rem; }
+    footer { padding: 0 16px calc(22px + env(safe-area-inset-bottom)); color: var(--muted); text-align: center; font-size: .65rem; line-height: 1.55; }
+    .sr-only { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0,0,0,0); white-space: nowrap; border: 0; }
+
+    @media (min-width: 650px) {
+      .hero { padding-left: 28px; padding-right: 28px; }
+      main { padding: 18px 20px 48px; }
+      .desktop-label { display: inline; }
+      .filter-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+      .kpis { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+      .split { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+      .insight-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+      .quality-grid { grid-template-columns: repeat(4, 1fr); }
+    }
+    @media (min-width: 980px) {
+      .hero { padding: 38px 38px 34px; }
+      main { padding: 20px 28px 52px; }
+      .filter-panel { display: block; }
+      .filter-grid { grid-template-columns: repeat(4, minmax(0, 1fr)); }
+      .kpis { grid-template-columns: repeat(6, minmax(0, 1fr)); }
+      .kpi { min-height: 150px; }
+      .grid { grid-template-columns: repeat(12, minmax(0, 1fr)); }
+      .span-4 { grid-column: span 4; }
+      .span-5 { grid-column: span 5; }
+      .span-7 { grid-column: span 7; }
+      .span-8 { grid-column: span 8; }
+      .span-12 { grid-column: span 12; }
+      .toolbar .primary { display: none; }
+    }
+    @media print {
+      @page { size: A4 landscape; margin: 8mm; }
+      body { background: white; }
+      .hero { padding: 20px; print-color-adjust: exact; -webkit-print-color-adjust: exact; }
+      main { padding: 10px 0; }
+      .toolbar, .filter-panel, .notice, footer { display: none !important; }
+      .kpis { grid-template-columns: repeat(6, 1fr); gap: 6px; }
+      .kpi, .card { box-shadow: none; break-inside: avoid; }
+      .grid { grid-template-columns: repeat(12, 1fr); gap: 7px; }
+      .span-4 { grid-column: span 4; }
+      .span-5 { grid-column: span 5; }
+      .span-7 { grid-column: span 7; }
+      .span-8 { grid-column: span 8; }
+      .span-12 { grid-column: span 12; }
+    }
+  </style>
+</head>
+<body>
+  <header class="hero">
+    <div class="shell hero-inner">
+      <div class="eyebrow">Kesihatan Awam · Tuaran, Sabah</div>
+      <h1>Dashboard Survelan Tibi</h1>
+      <p class="hero-copy">Ringkasan interaktif notifikasi, profil pesakit, klasifikasi klinikal dan hasil rawatan. Data telah dimuatkan terus—tiada fail tambahan diperlukan.</p>
+      <div class="hero-meta">
+        <span class="badge"><span class="live-dot"></span> 185 rekod dipramuat</span>
+        <span class="badge">Disember 2019 – Disember 2020</span>
+        <span class="badge">Paparan tanpa identiti pesakit</span>
+      </div>
+    </div>
+  </header>
+
+  <main class="shell">
+    <div class="toolbar">
+      <div class="toolbar-status">
+        <strong id="toolbarCount">185 daripada 185 rekod</strong>
+        <span id="toolbarHint">Semua penapis</span>
+      </div>
+      <button class="btn primary" id="filterToggle" type="button" aria-expanded="false" aria-controls="filters">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 6h16M7 12h10M10 18h4"/></svg>
+        <span class="desktop-label">Penapis</span>
+      </button>
+      <button class="btn" id="resetBtn" type="button" title="Set semula penapis">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 12a9 9 0 1 0 3-6.7L3 8"/><path d="M3 3v5h5"/></svg>
+        <span class="desktop-label">Set semula</span>
+      </button>
+      <button class="btn" id="exportBtn" type="button" title="Eksport ringkasan mukim">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 3v12m0 0 4-4m-4 4-4-4"/><path d="M5 20h14"/></svg>
+        <span class="desktop-label">CSV</span>
+      </button>
+      <button class="btn" id="printBtn" type="button" title="Cetak dashboard">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9V3h12v6M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2"/><path d="M6 14h12v7H6z"/></svg>
+        <span class="desktop-label">Cetak</span>
+      </button>
+    </div>
+
+    <section class="filter-panel" id="filters" aria-label="Penapis dashboard">
+      <div class="filter-head">
+        <div><h2>Penapis analisis</h2><p>Semua visual dikemas kini secara serentak.</p></div>
+        <span class="pill" id="filterResult">185 rekod</span>
+      </div>
+      <div class="filter-grid" id="filterGrid"></div>
+      <div class="active-filters" id="activeFilters" aria-live="polite"></div>
+    </section>
+
+    <section class="kpis" aria-label="Petunjuk utama">
+      <article class="kpi">
+        <div class="kpi-top"><span class="kpi-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M8 6h13M8 12h13M8 18h13"/><path d="M3 6h.01M3 12h.01M3 18h.01"/></svg></span></div>
+        <div class="kpi-value" id="kTotal">185</div><div class="kpi-label">Jumlah notifikasi</div><div class="kpi-sub" id="kTotalSub">100% daripada pangkalan data</div>
+      </article>
+      <article class="kpi">
+        <div class="kpi-top"><span class="kpi-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 3v18M12 8c-2-3-6-3-7 1-1 5 2 8 7 9M12 8c2-3 6-3 7 1 1 5-2 8-7 9"/></svg></span></div>
+        <div class="kpi-value" id="kPulm">156</div><div class="kpi-label">Tibi pulmonari</div><div class="kpi-sub" id="kPulmSub">84.3% rekod terpilih</div>
+      </article>
+      <article class="kpi">
+        <div class="kpi-top"><span class="kpi-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="8"/><path d="M8 12h8M12 8v8"/></svg></span></div>
+        <div class="kpi-value" id="kPositive">122</div><div class="kpi-label">Kahak positif</div><div class="kpi-sub" id="kPositiveSub">65.9% rekod terpilih</div>
+      </article>
+      <article class="kpi">
+        <div class="kpi-top"><span class="kpi-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m5 12 4 4L19 6"/></svg></span></div>
+        <div class="kpi-value" id="kSuccess">86.5%</div><div class="kpi-label">Kejayaan rawatan</div><div class="kpi-sub" id="kSuccessSub">160 daripada 185 rekod</div>
+      </article>
+      <article class="kpi">
+        <div class="kpi-top"><span class="kpi-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 9v4M12 17h.01"/><path d="M10.3 3.7 2.6 17a2 2 0 0 0 1.7 3h15.4a2 2 0 0 0 1.7-3L13.7 3.7a2 2 0 0 0-3.4 0Z"/></svg></span></div>
+        <div class="kpi-value" id="kDeaths">20</div><div class="kpi-label">Kematian</div><div class="kpi-sub" id="kDeathsSub">10.8% rekod terpilih</div>
+      </article>
+      <article class="kpi">
+        <div class="kpi-top"><span class="kpi-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 5h18v14H3z"/><path d="M7 9h10M7 13h6"/></svg></span></div>
+        <div class="kpi-value" id="k2020">178</div><div class="kpi-label">Notifikasi 2020</div><div class="kpi-sub" id="k2020Sub">96.2% rekod terpilih</div>
+      </article>
+    </section>
+
+    <section class="grid">
+      <article class="card insight span-12">
+        <div class="card-head"><div><h2>Ringkasan pantas</h2><p class="card-desc">Dijana berdasarkan pilihan penapis semasa.</p></div><span class="pill">Live</span></div>
+        <div class="insight-grid" id="insights"></div>
+      </article>
+
+      <article class="card span-8">
+        <div class="card-head"><div><h2>Trend notifikasi bulanan</h2><p class="card-desc">Bilangan kes mengikut bulan notifikasi.</p></div><span class="pill" id="trendTotal">n = 185</span></div>
+        <div class="chart" id="trendChart"></div>
+      </article>
+
+      <article class="card span-4">
+        <div class="card-head"><div><h2>Profil jantina</h2><p class="card-desc">Pecahan rekod terpilih.</p></div></div>
+        <div id="sexDonut"></div>
+      </article>
+
+      <article class="card span-7">
+        <div class="card-head"><div><h2>Profil umur mengikut jantina</h2><p class="card-desc">Kumpulan umur semasa notifikasi.</p></div><span class="pill">Bilangan kes</span></div>
+        <div class="bar-list" id="ageChart"></div>
+        <div class="legend"><span><i class="dot" style="background:var(--teal)"></i>Lelaki</span><span><i class="dot" style="background:var(--gold)"></i>Perempuan</span></div>
+      </article>
+
+      <article class="card span-5">
+        <div class="card-head"><div><h2>Status kewarganegaraan</h2><p class="card-desc">Warganegara dan bukan warganegara.</p></div></div>
+        <div id="citizenDonut"></div>
+      </article>
+
+      <article class="card span-5">
+        <div class="card-head"><div><h2>Klasifikasi tibi</h2><p class="card-desc">Kumpulan diagnosis yang distandardkan.</p></div></div>
+        <div class="bar-list" id="classChart"></div>
+      </article>
+
+      <article class="card span-7">
+        <div class="card-head"><div><h2>Hasil rawatan</h2><p class="card-desc">Kejayaan = sembuh + sempurna rawatan.</p></div><span class="pill" id="outcomeSuccess">86.5% berjaya</span></div>
+        <div class="bar-list" id="outcomeChart"></div>
+      </article>
+
+      <article class="card span-12">
+        <div class="card-head"><div><h2>Taburan mengikut mukim</h2><p class="card-desc">Beban kes dan hasil rawatan mengikut mukim alamat eNotis.</p></div><span class="pill" id="mukimCount">17 mukim</span></div>
+        <div class="table-wrap">
+          <table>
+            <thead><tr><th>Mukim</th><th>Notifikasi</th><th>Bahagian</th><th>Berjaya</th><th>Kematian</th></tr></thead>
+            <tbody id="mukimTable"></tbody>
+          </table>
+        </div>
+      </article>
+
+      <article class="card span-12">
+        <div class="card-head"><div><h2>Semakan kualiti data</h2><p class="card-desc">Penunjuk kelengkapan untuk rekod terpilih.</p></div><span class="pill">Audit ringkas</span></div>
+        <div class="quality-grid" id="qualityGrid"></div>
+        <div class="notice">Nota privasi: dashboard ini tidak mengandungi nama, tarikh lahir, alamat penuh, lokaliti atau koordinat. Walau bagaimanapun, gabungan penapis boleh menghasilkan bilangan kecil; gunakan untuk pembentangan dalaman dan elakkan perkongsian awam tanpa semakan lanjut.</div>
+      </article>
+    </section>
+  </main>
+
+  <footer>
+    Sumber: TBIS 101A, Daerah Tuaran · Dijana 9 Oktober 2026 · Fail kendiri dan boleh dibuka di luar talian.<br>
+    Definisi dashboard: kejayaan rawatan = Sembuh + Sempurna Rawatan, dibahagi semua rekod terpilih. Klasifikasi diagnosis ialah pengelompokan analitik daripada teks diagnosis asal.
+  </footer>
+
+  <script>
+    "use strict";
+    const DATA = [{"y":2020,"m":1,"a":"45–54","s":"Perempuan","c":"Warganegara","u":"Topokon","t":"Pulmonari kahak positif","o":"Sembuh","q":0},{"y":2020,"m":1,"a":"25–34","s":"Perempuan","c":"Warganegara","u":"Kiulu","t":"Pulmonari kahak negatif","o":"Sempurna Rawatan","q":0},{"y":2020,"m":1,"a":"65+","s":"Lelaki","c":"Bukan warganegara","u":"Kiulu","t":"Pulmonari kahak negatif","o":"Sempurna Rawatan","q":0},{"y":2020,"m":1,"a":"65+","s":"Perempuan","c":"Warganegara","u":"Topokon","t":"Tibi ekstrapulmonari","o":"Sempurna Rawatan","q":0},{"y":2020,"m":1,"a":"15–24","s":"Lelaki","c":"Warganegara","u":"Kiulu","t":"Pulmonari kahak negatif","o":"Sempurna Rawatan","q":0},{"y":2020,"m":1,"a":"25–34","s":"Lelaki","c":"Warganegara","u":"Tambalang","t":"Pulmonari kahak positif","o":"Sembuh","q":2},{"y":2020,"m":2,"a":"45–54","s":"Lelaki","c":"Warganegara","u":"Tengah","t":"Tibi ekstrapulmonari","o":"Sempurna Rawatan","q":0},{"y":2020,"m":2,"a":"45–54","s":"Perempuan","c":"Warganegara","u":"Kiulu","t":"Pulmonari kahak positif","o":"Mati","q":2},{"y":2020,"m":2,"a":"15–24","s":"Lelaki","c":"Warganegara","u":"Kiulu","t":"Pulmonari kahak positif","o":"Sembuh","q":2},{"y":2020,"m":2,"a":"15–24","s":"Lelaki","c":"Warganegara","u":"Kiulu","t":"Pulmonari kahak positif","o":"Sembuh","q":0},{"y":2020,"m":2,"a":"55–64","s":"Lelaki","c":"Warganegara","u":"Batangan","t":"Pulmonari kahak negatif","o":"Sempurna Rawatan","q":0},{"y":2020,"m":2,"a":"45–54","s":"Lelaki","c":"Warganegara","u":"Serusop","t":"Pulmonari kahak negatif","o":"Sempurna Rawatan","q":0},{"y":2020,"m":2,"a":"55–64","s":"Perempuan","c":"Bukan warganegara","u":"Kiulu","t":"Pulmonari kahak positif","o":"Sembuh","q":2},{"y":2020,"m":2,"a":"15–24","s":"Lelaki","c":"Warganegara","u":"Topokon","t":"Pulmonari kahak positif","o":"Sembuh","q":2},{"y":2020,"m":2,"a":"55–64","s":"Perempuan","c":"Warganegara","u":"Tambalang","t":"Pulmonari kahak negatif","o":"Sempurna Rawatan","q":0},{"y":2020,"m":2,"a":"15–24","s":"Lelaki","c":"Warganegara","u":"Topokon","t":"Pulmonari kahak negatif","o":"Sempurna Rawatan","q":0},{"y":2020,"m":2,"a":"65+","s":"Perempuan","c":"Warganegara","u":"Mangkaladoi","t":"Pulmonari kahak positif","o":"Sempurna Rawatan","q":0},{"y":2020,"m":4,"a":"65+","s":"Lelaki","c":"Warganegara","u":"Marabahai","t":"Tibi ekstrapulmonari","o":"Sempurna Rawatan","q":0},{"y":2020,"m":4,"a":"25–34","s":"Lelaki","c":"Warganegara","u":"Tamparuli","t":"Pulmonari kahak positif","o":"Sembuh","q":0},{"y":2020,"m":4,"a":"25–34","s":"Perempuan","c":"Warganegara","u":"Batangan","t":"Pulmonari kahak positif","o":"Sembuh","q":0},{"y":2020,"m":4,"a":"35–44","s":"Lelaki","c":"Warganegara","u":"Tenghilan","t":"Pulmonari kahak negatif","o":"Sempurna Rawatan","q":0},{"y":2020,"m":4,"a":"35–44","s":"Perempuan","c":"Warganegara","u":"Serusop","t":"Pulmonari kahak positif","o":"Sembuh","q":0},{"y":2020,"m":5,"a":"45–54","s":"Lelaki","c":"Bukan warganegara","u":"Kiulu","t":"Pulmonari kahak positif","o":"Sembuh","q":2},{"y":2020,"m":5,"a":"25–34","s":"Perempuan","c":"Warganegara","u":"Kiulu","t":"Pulmonari kahak positif","o":"Sembuh","q":2},{"y":2019,"m":12,"a":"45–54","s":"Lelaki","c":"Warganegara","u":"Kiulu","t":"Pulmonari kahak negatif","o":"Sempurna Rawatan","q":4},{"y":2019,"m":12,"a":"15–24","s":"Perempuan","c":"Warganegara","u":"Tengah","t":"Pulmonari kahak positif","o":"Sembuh","q":4},{"y":2019,"m":12,"a":"25–34","s":"Lelaki","c":"Warganegara","u":"Batangan","t":"Pulmonari kahak positif","o":"Sembuh","q":4},{"y":2019,"m":12,"a":"45–54","s":"Lelaki","c":"Warganegara","u":"Batangan","t":"Pulmonari kahak positif","o":"Sembuh","q":4},{"y":2020,"m":1,"a":"15–24","s":"Lelaki","c":"Warganegara","u":"Selupuh","t":"Pulmonari kahak positif","o":"Sembuh","q":2},{"y":2020,"m":2,"a":"25–34","s":"Perempuan","c":"Bukan warganegara","u":"Kiulu","t":"Pulmonari kahak positif","o":"Sembuh","q":2},{"y":2020,"m":2,"a":"65+","s":"Perempuan","c":"Warganegara","u":"Batangan","t":"Pulmonari kahak negatif","o":"Sempurna Rawatan","q":0},{"y":2020,"m":2,"a":"55–64","s":"Lelaki","c":"Warganegara","u":"Tengah","t":"Pulmonari kahak negatif","o":"Sempurna Rawatan","q":0},{"y":2020,"m":2,"a":"35–44","s":"Lelaki","c":"Warganegara","u":"Kiulu","t":"Pulmonari kahak negatif","o":"Sempurna Rawatan","q":0},{"y":2020,"m":2,"a":"45–54","s":"Perempuan","c":"Warganegara","u":"Kiulu","t":"Pulmonari kahak negatif","o":"Sempurna Rawatan","q":0},{"y":2020,"m":2,"a":"15–24","s":"Perempuan","c":"Warganegara","u":"Serusop","t":"Pulmonari kahak positif","o":"Sembuh","q":0},{"y":2020,"m":2,"a":"25–34","s":"Perempuan","c":"Warganegara","u":"Kiulu","t":"Tibi ekstrapulmonari","o":"Sempurna Rawatan","q":2},{"y":2020,"m":2,"a":"25–34","s":"Lelaki","c":"Warganegara","u":"Serusop","t":"Pulmonari kahak positif","o":"Mati","q":0},{"y":2020,"m":2,"a":"35–44","s":"Lelaki","c":"Warganegara","u":"Tamparuli","t":"Pulmonari kahak negatif","o":"Sempurna Rawatan","q":0},{"y":2020,"m":2,"a":"25–34","s":"Lelaki","c":"Warganegara","u":"Marabahai","t":"Pulmonari kahak negatif","o":"Sempurna Rawatan","q":0},{"y":2020,"m":2,"a":"45–54","s":"Lelaki","c":"Warganegara","u":"Berungis","t":"Pulmonari kahak positif","o":"Sembuh","q":0},{"y":2020,"m":6,"a":"0–14","s":"Lelaki","c":"Warganegara","u":"Lembah","t":"Pulmonari kahak negatif","o":"Sempurna Rawatan","q":0},{"y":2020,"m":6,"a":"15–24","s":"Perempuan","c":"Warganegara","u":"Kiulu","t":"Pulmonari kahak positif","o":"Sembuh","q":0},{"y":2020,"m":6,"a":"35–44","s":"Perempuan","c":"Bukan warganegara","u":"Kiulu","t":"Pulmonari kahak positif","o":"Sembuh","q":0},{"y":2020,"m":6,"a":"35–44","s":"Lelaki","c":"Warganegara","u":"Serusop","t":"Tibi ekstrapulmonari","o":"Sempurna Rawatan","q":0},{"y":2020,"m":6,"a":"15–24","s":"Perempuan","c":"Warganegara","u":"Mengkabong","t":"Tibi ekstrapulmonari","o":"Sempurna Rawatan","q":0},{"y":2020,"m":6,"a":"45–54","s":"Lelaki","c":"Warganegara","u":"Tamparuli","t":"Tibi ekstrapulmonari","o":"Sempurna Rawatan","q":0},{"y":2020,"m":6,"a":"35–44","s":"Lelaki","c":"Bukan warganegara","u":"Batangan","t":"Pulmonari kahak negatif","o":"Sempurna Rawatan","q":0},{"y":2020,"m":6,"a":"35–44","s":"Lelaki","c":"Bukan warganegara","u":"Kiulu","t":"Pulmonari kahak negatif","o":"Sempurna Rawatan","q":0},{"y":2020,"m":1,"a":"35–44","s":"Perempuan","c":"Warganegara","u":"Serusop","t":"Pulmonari kahak positif","o":"Sembuh","q":0},{"y":2020,"m":1,"a":"55–64","s":"Perempuan","c":"Warganegara","u":"Tenghilan","t":"Pulmonari kahak negatif","o":"Sempurna Rawatan","q":0},{"y":2020,"m":1,"a":"15–24","s":"Lelaki","c":"Bukan warganegara","u":"Batangan","t":"Pulmonari kahak positif","o":"Sembuh","q":0},{"y":2020,"m":1,"a":"55–64","s":"Lelaki","c":"Warganegara","u":"Kiulu","t":"Pulmonari kahak negatif","o":"Sempurna Rawatan","q":0},{"y":2020,"m":1,"a":"45–54","s":"Lelaki","c":"Bukan warganegara","u":"Kiulu","t":"Pulmonari kahak positif","o":"Sembuh","q":2},{"y":2020,"m":1,"a":"15–24","s":"Perempuan","c":"Warganegara","u":"Kiulu","t":"Pulmonari kahak positif","o":"Mati","q":0},{"y":2020,"m":1,"a":"55–64","s":"Lelaki","c":"Warganegara","u":"Tenghilan","t":"Pulmonari kahak positif","o":"Sembuh","q":0},{"y":2020,"m":1,"a":"15–24","s":"Lelaki","c":"Warganegara","u":"Serusop","t":"Pulmonari kahak positif","o":"Sembuh","q":0},{"y":2020,"m":1,"a":"25–34","s":"Lelaki","c":"Bukan warganegara","u":"Kiulu","t":"Pulmonari kahak positif","o":"Sembuh","q":2},{"y":2020,"m":1,"a":"45–54","s":"Lelaki","c":"Warganegara","u":"Kiulu","t":"Pulmonari kahak positif","o":"Sembuh","q":0},{"y":2020,"m":1,"a":"25–34","s":"Lelaki","c":"Warganegara","u":"Berungis","t":"Pulmonari kahak positif","o":"Sembuh","q":0},{"y":2020,"m":3,"a":"35–44","s":"Perempuan","c":"Bukan warganegara","u":"Marabahai","t":"Pulmonari kahak positif","o":"Sembuh","q":0},{"y":2020,"m":3,"a":"45–54","s":"Lelaki","c":"Warganegara","u":"Tambalang","t":"Pulmonari kahak positif","o":"Sembuh","q":0},{"y":2020,"m":4,"a":"45–54","s":"Perempuan","c":"Warganegara","u":"Mengkabong","t":"Pulmonari kahak positif","o":"Sembuh","q":0},{"y":2020,"m":4,"a":"55–64","s":"Perempuan","c":"Bukan warganegara","u":"Berungis","t":"Pulmonari kahak positif","o":"Sembuh","q":0},{"y":2020,"m":4,"a":"55–64","s":"Lelaki","c":"Bukan warganegara","u":"Kiulu","t":"Pulmonari kahak positif","o":"Mati","q":0},{"y":2020,"m":4,"a":"25–34","s":"Lelaki","c":"Warganegara","u":"Kiulu","t":"Tibi ekstrapulmonari","o":"Sempurna Rawatan","q":0},{"y":2020,"m":7,"a":"65+","s":"Lelaki","c":"Warganegara","u":"Tengah","t":"Pulmonari kahak positif","o":"Sembuh","q":2},{"y":2020,"m":7,"a":"15–24","s":"Perempuan","c":"Warganegara","u":"Selupuh","t":"Pulmonari kahak positif","o":"Sembuh","q":2},{"y":2020,"m":7,"a":"15–24","s":"Lelaki","c":"Warganegara","u":"Kiulu","t":"Pulmonari kahak positif","o":"Sembuh","q":0},{"y":2020,"m":7,"a":"15–24","s":"Lelaki","c":"Warganegara","u":"Selupuh","t":"Pulmonari kahak positif","o":"Sembuh","q":0},{"y":2020,"m":7,"a":"45–54","s":"Lelaki","c":"Warganegara","u":"Tengah","t":"Pulmonari kahak positif","o":"Sembuh","q":0},{"y":2020,"m":7,"a":"55–64","s":"Lelaki","c":"Warganegara","u":"Tengah","t":"Tibi ekstrapulmonari","o":"Sempurna Rawatan","q":2},{"y":2020,"m":7,"a":"35–44","s":"Perempuan","c":"Warganegara","u":"Serusop","t":"Tibi ekstrapulmonari","o":"Sempurna Rawatan","q":0},{"y":2019,"m":12,"a":"45–54","s":"Lelaki","c":"Warganegara","u":"Topokon","t":"Pulmonari kahak positif","o":"Sembuh","q":4},{"y":2019,"m":12,"a":"65+","s":"Lelaki","c":"Warganegara","u":"Tengah","t":"Tibi ekstrapulmonari","o":"Sempurna Rawatan","q":4},{"y":2019,"m":12,"a":"55–64","s":"Lelaki","c":"Warganegara","u":"Ulu","t":"Pulmonari kahak negatif","o":"Sempurna Rawatan","q":4},{"y":2020,"m":1,"a":"55–64","s":"Perempuan","c":"Warganegara","u":"Tenghilan","t":"Tibi tahan ubat","o":"Sembuh","q":2},{"y":2020,"m":1,"a":"55–64","s":"Lelaki","c":"Warganegara","u":"Selupuh","t":"Pulmonari kahak positif","o":"Sembuh","q":0},{"y":2020,"m":1,"a":"45–54","s":"Lelaki","c":"Warganegara","u":"Tenghilan","t":"Tibi ekstrapulmonari","o":"Sempurna Rawatan","q":0},{"y":2020,"m":1,"a":"35–44","s":"Perempuan","c":"Warganegara","u":"Tamparuli","t":"Pulmonari kahak negatif","o":"Sempurna Rawatan","q":0},{"y":2020,"m":1,"a":"0–14","s":"Lelaki","c":"Warganegara","u":"Berungis","t":"Pulmonari kahak positif","o":"Sembuh","q":0},{"y":2020,"m":1,"a":"45–54","s":"Perempuan","c":"Warganegara","u":"Marabahai","t":"Pulmonari kahak positif","o":"Sembuh","q":0},{"y":2020,"m":1,"a":"35–44","s":"Lelaki","c":"Warganegara","u":"Mengkabong","t":"Pulmonari kahak positif","o":"Mati","q":0},{"y":2020,"m":3,"a":"45–54","s":"Lelaki","c":"Warganegara","u":"Kiulu","t":"Pulmonari kahak positif","o":"Sembuh","q":0},{"y":2020,"m":3,"a":"45–54","s":"Lelaki","c":"Warganegara","u":"Tambalang","t":"Pulmonari kahak negatif","o":"Sempurna Rawatan","q":0},{"y":2020,"m":3,"a":"25–34","s":"Lelaki","c":"Warganegara","u":"Kiulu","t":"Tibi ekstrapulmonari","o":"Sempurna Rawatan","q":2},{"y":2020,"m":3,"a":"65+","s":"Lelaki","c":"Warganegara","u":"Kiulu","t":"Pulmonari kahak positif","o":"Mati","q":2},{"y":2020,"m":3,"a":"55–64","s":"Perempuan","c":"Warganegara","u":"Serusop","t":"Pulmonari kahak positif","o":"Sembuh","q":0},{"y":2020,"m":3,"a":"35–44","s":"Lelaki","c":"Bukan warganegara","u":"Marabahai","t":"Pulmonari kahak positif","o":"Sembuh","q":0},{"y":2020,"m":3,"a":"55–64","s":"Perempuan","c":"Bukan warganegara","u":"Tambalang","t":"Pulmonari kahak negatif","o":"Sempurna Rawatan","q":0},{"y":2020,"m":3,"a":"45–54","s":"Lelaki","c":"Warganegara","u":"Batangan","t":"Pulmonari kahak positif","o":"Sembuh","q":0},{"y":2020,"m":6,"a":"65+","s":"Lelaki","c":"Warganegara","u":"Berungis","t":"Pulmonari kahak positif","o":"Sembuh","q":0},{"y":2020,"m":6,"a":"35–44","s":"Perempuan","c":"Bukan warganegara","u":"Berungis","t":"Pulmonari kahak positif","o":"Sembuh","q":0},{"y":2020,"m":6,"a":"15–24","s":"Lelaki","c":"Warganegara","u":"Tambalang","t":"Pulmonari kahak positif","o":"Sembuh","q":0},{"y":2020,"m":6,"a":"35–44","s":"Perempuan","c":"Warganegara","u":"Kiulu","t":"Pulmonari kahak positif","o":"Sembuh","q":2},{"y":2020,"m":6,"a":"45–54","s":"Lelaki","c":"Warganegara","u":"Kiulu","t":"Pulmonari kahak negatif","o":"Sempurna Rawatan","q":0},{"y":2020,"m":7,"a":"45–54","s":"Lelaki","c":"Warganegara","u":"Kiulu","t":"Pulmonari kahak positif","o":"Sembuh","q":2},{"y":2020,"m":8,"a":"35–44","s":"Lelaki","c":"Bukan warganegara","u":"Kiulu","t":"Pulmonari kahak positif","o":"Pindah Keluar & Hilang","q":0},{"y":2020,"m":8,"a":"15–24","s":"Perempuan","c":"Bukan warganegara","u":"Kiulu","t":"Pulmonari kahak positif","o":"Sembuh","q":0},{"y":2020,"m":8,"a":"25–34","s":"Perempuan","c":"Warganegara","u":"Serusop","t":"Pulmonari kahak positif","o":"Sembuh","q":0},{"y":2020,"m":8,"a":"45–54","s":"Perempuan","c":"Warganegara","u":"Serusop","t":"Pulmonari kahak positif","o":"Sembuh","q":0},{"y":2020,"m":8,"a":"65+","s":"Lelaki","c":"Warganegara","u":"Kiulu","t":"Pulmonari kahak positif","o":"Mati","q":0},{"y":2020,"m":8,"a":"35–44","s":"Lelaki","c":"Warganegara","u":"Tambalang","t":"Tibi ekstrapulmonari","o":"Sempurna Rawatan","q":0},{"y":2020,"m":8,"a":"35–44","s":"Perempuan","c":"Warganegara","u":"Marabahai","t":"Pulmonari kahak positif","o":"Sembuh","q":2},{"y":2020,"m":8,"a":"45–54","s":"Lelaki","c":"Warganegara","u":"Batangan","t":"Pulmonari kahak positif","o":"Sembuh","q":0},{"y":2020,"m":8,"a":"65+","s":"Lelaki","c":"Warganegara","u":"Pekan nabalu","t":"Tibi ekstrapulmonari","o":"Sempurna Rawatan","q":0},{"y":2020,"m":7,"a":"55–64","s":"Lelaki","c":"Warganegara","u":"Berungis","t":"Pulmonari kahak positif","o":"Sembuh","q":0},{"y":2020,"m":7,"a":"45–54","s":"Lelaki","c":"Warganegara","u":"Tenghilan","t":"Pulmonari kahak positif","o":"Sembuh","q":0},{"y":2020,"m":7,"a":"0–14","s":"Lelaki","c":"Warganegara","u":"Kiulu","t":"Pulmonari kahak negatif","o":"Sempurna Rawatan","q":0},{"y":2020,"m":9,"a":"25–34","s":"Perempuan","c":"Warganegara","u":"Kiulu","t":"Pulmonari kahak positif","o":"Sembuh","q":0},{"y":2020,"m":9,"a":"25–34","s":"Lelaki","c":"Warganegara","u":"Mengkabong","t":"Pulmonari kahak positif","o":"Sembuh","q":0},{"y":2020,"m":9,"a":"55–64","s":"Perempuan","c":"Warganegara","u":"Kiulu","t":"Pulmonari kahak positif","o":"Sembuh","q":0},{"y":2020,"m":9,"a":"45–54","s":"Lelaki","c":"Warganegara","u":"Kiulu","t":"Tibi ekstrapulmonari","o":"Mati","q":0},{"y":2020,"m":9,"a":"25–34","s":"Lelaki","c":"Bukan warganegara","u":"Kiulu","t":"Tibi ekstrapulmonari","o":"Sempurna Rawatan","q":0},{"y":2020,"m":9,"a":"25–34","s":"Lelaki","c":"Warganegara","u":"Kiulu","t":"Pulmonari kahak positif","o":"Sembuh","q":0},{"y":2020,"m":9,"a":"55–64","s":"Lelaki","c":"Warganegara","u":"Mengkabong","t":"Tibi ekstrapulmonari","o":"Sempurna Rawatan","q":0},{"y":2020,"m":5,"a":"55–64","s":"Lelaki","c":"Warganegara","u":"Tamparuli","t":"Pulmonari kahak positif","o":"Sembuh","q":0},{"y":2020,"m":5,"a":"65+","s":"Lelaki","c":"Warganegara","u":"Batangan","t":"Pulmonari kahak positif","o":"Mati","q":0},{"y":2020,"m":5,"a":"35–44","s":"Lelaki","c":"Warganegara","u":"Mangkaladoi","t":"Pulmonari kahak positif","o":"Sembuh","q":0},{"y":2020,"m":5,"a":"25–34","s":"Lelaki","c":"Warganegara","u":"Kiulu","t":"Pulmonari kahak positif","o":"Gagal Rawatan","q":0},{"y":2020,"m":5,"a":"65+","s":"Lelaki","c":"Warganegara","u":"Topokon","t":"Pulmonari kahak positif","o":"Mati","q":0},{"y":2020,"m":5,"a":"35–44","s":"Lelaki","c":"Bukan warganegara","u":"Kiulu","t":"Pulmonari kahak positif","o":"Sembuh","q":0},{"y":2020,"m":5,"a":"55–64","s":"Lelaki","c":"Warganegara","u":"Tenghilan","t":"Pulmonari kahak positif","o":"Sembuh","q":0},{"y":2020,"m":5,"a":"15–24","s":"Lelaki","c":"Warganegara","u":"Kiulu","t":"Pulmonari kahak positif","o":"Sembuh","q":2},{"y":2020,"m":9,"a":"25–34","s":"Lelaki","c":"Bukan warganegara","u":"Kiulu","t":"Pulmonari kahak positif","o":"Sembuh","q":0},{"y":2020,"m":9,"a":"35–44","s":"Lelaki","c":"Warganegara","u":"Serusop","t":"Tibi ekstrapulmonari","o":"Sempurna Rawatan","q":0},{"y":2020,"m":9,"a":"65+","s":"Lelaki","c":"Warganegara","u":"Tamparuli","t":"Pulmonari kahak positif","o":"Sembuh","q":0},{"y":2020,"m":9,"a":"45–54","s":"Lelaki","c":"Warganegara","u":"Tenghilan","t":"Pulmonari kahak positif","o":"Sembuh","q":2},{"y":2020,"m":9,"a":"35–44","s":"Lelaki","c":"Warganegara","u":"Kiulu","t":"Pulmonari kahak positif","o":"Sembuh","q":0},{"y":2020,"m":9,"a":"45–54","s":"Lelaki","c":"Warganegara","u":"Tengah","t":"Pulmonari kahak positif","o":"Sembuh","q":0},{"y":2020,"m":9,"a":"35–44","s":"Lelaki","c":"Bukan warganegara","u":"Selupuh","t":"Pulmonari kahak positif","o":"Sembuh","q":0},{"y":2020,"m":9,"a":"25–34","s":"Lelaki","c":"Bukan warganegara","u":"Kiulu","t":"Pulmonari kahak positif","o":"Sembuh","q":0},{"y":2020,"m":9,"a":"25–34","s":"Perempuan","c":"Warganegara","u":"Kiulu","t":"Pulmonari kahak positif","o":"Sembuh","q":0},{"y":2020,"m":9,"a":"35–44","s":"Lelaki","c":"Warganegara","u":"Serusop","t":"Tibi ekstrapulmonari","o":"Mati","q":0},{"y":2020,"m":9,"a":"65+","s":"Lelaki","c":"Warganegara","u":"Tambalang","t":"Pulmonari kahak positif","o":"Sembuh","q":0},{"y":2020,"m":9,"a":"25–34","s":"Lelaki","c":"Bukan warganegara","u":"Batangan","t":"Pulmonari kahak positif","o":"Sembuh","q":0},{"y":2020,"m":9,"a":"35–44","s":"Lelaki","c":"Warganegara","u":"Tambalang","t":"Tibi ekstrapulmonari","o":"Sempurna Rawatan","q":2},{"y":2020,"m":9,"a":"35–44","s":"Perempuan","c":"Warganegara","u":"Kiulu","t":"Tibi ekstrapulmonari","o":"Sempurna Rawatan","q":0},{"y":2020,"m":9,"a":"0–14","s":"Perempuan","c":"Warganegara","u":"Kiulu","t":"Pulmonari kahak positif","o":"Sembuh","q":0},{"y":2020,"m":10,"a":"35–44","s":"Perempuan","c":"Warganegara","u":"Kiulu","t":"Pulmonari kahak positif","o":"Sembuh","q":0},{"y":2020,"m":6,"a":"25–34","s":"Lelaki","c":"Warganegara","u":"Tambalang","t":"Pulmonari kahak positif","o":"Sembuh","q":2},{"y":2020,"m":6,"a":"15–24","s":"Lelaki","c":"Warganegara","u":"Topokon","t":"Pulmonari kahak positif","o":"Sembuh","q":0},{"y":2020,"m":6,"a":"35–44","s":"Lelaki","c":"Warganegara","u":"Kiulu","t":"Tibi ekstrapulmonari","o":"Mati","q":0},{"y":2020,"m":6,"a":"45–54","s":"Perempuan","c":"Warganegara","u":"Kiulu","t":"Tibi ekstrapulmonari","o":"Sempurna Rawatan","q":2},{"y":2020,"m":7,"a":"45–54","s":"Lelaki","c":"Bukan warganegara","u":"Kiulu","t":"Pulmonari kahak positif","o":"Sembuh","q":0},{"y":2020,"m":8,"a":"15–24","s":"Lelaki","c":"Warganegara","u":"Tengah","t":"Pulmonari kahak positif","o":"Sembuh","q":0},{"y":2020,"m":8,"a":"25–34","s":"Lelaki","c":"Warganegara","u":"Kiulu","t":"Tibi tahan ubat","o":"Sembuh","q":0},{"y":2020,"m":8,"a":"55–64","s":"Perempuan","c":"Warganegara","u":"Kiulu","t":"Tibi ekstrapulmonari","o":"Sempurna Rawatan","q":0},{"y":2020,"m":8,"a":"0–14","s":"Lelaki","c":"Warganegara","u":"Kiulu","t":"Pulmonari kahak positif","o":"Mati","q":0},{"y":2020,"m":8,"a":"Tidak dinyatakan","s":"Lelaki","c":"Warganegara","u":"Kiulu","t":"Pulmonari kahak positif","o":"Mati","q":3},{"y":2020,"m":11,"a":"45–54","s":"Lelaki","c":"Warganegara","u":"Tamparuli","t":"Pulmonari kahak negatif","o":"Sempurna Rawatan","q":0},{"y":2020,"m":11,"a":"35–44","s":"Perempuan","c":"Warganegara","u":"Kiulu","t":"Pulmonari kahak positif","o":"Sembuh","q":0},{"y":2020,"m":11,"a":"15–24","s":"Perempuan","c":"Warganegara","u":"Tenghilan","t":"Pulmonari kahak positif","o":"Sembuh","q":0},{"y":2020,"m":11,"a":"45–54","s":"Perempuan","c":"Warganegara","u":"Kiulu","t":"Pulmonari kahak positif","o":"Sembuh","q":2},{"y":2020,"m":11,"a":"65+","s":"Perempuan","c":"Warganegara","u":"Serusop","t":"Pulmonari kahak positif","o":"Mati","q":0},{"y":2020,"m":11,"a":"25–34","s":"Lelaki","c":"Warganegara","u":"Kiulu","t":"Pulmonari kahak positif","o":"Sembuh","q":0},{"y":2020,"m":12,"a":"25–34","s":"Lelaki","c":"Bukan warganegara","u":"Kiulu","t":"Pulmonari kahak positif","o":"Sembuh","q":0},{"y":2020,"m":12,"a":"45–54","s":"Perempuan","c":"Bukan warganegara","u":"Tambalang","t":"Pulmonari kahak negatif","o":"Sempurna Rawatan","q":0},{"y":2020,"m":12,"a":"25–34","s":"Lelaki","c":"Bukan warganegara","u":"Berungis","t":"Pulmonari kahak positif","o":"Sembuh","q":0},{"y":2020,"m":12,"a":"45–54","s":"Perempuan","c":"Warganegara","u":"Tenghilan","t":"Pulmonari kahak positif","o":"Sembuh","q":0},{"y":2020,"m":12,"a":"15–24","s":"Lelaki","c":"Warganegara","u":"Tengah","t":"Pulmonari kahak positif","o":"Gagal Rawatan","q":0},{"y":2020,"m":12,"a":"45–54","s":"Perempuan","c":"Warganegara","u":"Kiulu","t":"Pulmonari kahak negatif","o":"Tukar Diagnosis","q":2},{"y":2020,"m":12,"a":"65+","s":"Lelaki","c":"Warganegara","u":"Batangan","t":"Tibi ekstrapulmonari","o":"Mati","q":0},{"y":2020,"m":12,"a":"65+","s":"Lelaki","c":"Warganegara","u":"Kiulu","t":"Pulmonari kahak positif","o":"Sembuh","q":0},{"y":2020,"m":12,"a":"25–34","s":"Lelaki","c":"Warganegara","u":"Mangkaladoi","t":"Tibi ekstrapulmonari","o":"Sempurna Rawatan","q":0},{"y":2020,"m":12,"a":"25–34","s":"Lelaki","c":"Warganegara","u":"Kiulu","t":"Pulmonari kahak positif","o":"Mati","q":2},{"y":2020,"m":12,"a":"25–34","s":"Lelaki","c":"Bukan warganegara","u":"Selupuh","t":"Pulmonari kahak positif","o":"Sembuh","q":0},{"y":2020,"m":12,"a":"15–24","s":"Lelaki","c":"Warganegara","u":"Kiulu","t":"Pulmonari kahak positif","o":"Sembuh","q":0},{"y":2020,"m":12,"a":"15–24","s":"Lelaki","c":"Warganegara","u":"Selupuh","t":"Tibi ekstrapulmonari","o":"Sempurna Rawatan","q":0},{"y":2020,"m":12,"a":"25–34","s":"Perempuan","c":"Warganegara","u":"Mengkabong","t":"Pulmonari kahak positif","o":"Sembuh","q":0},{"y":2020,"m":12,"a":"55–64","s":"Lelaki","c":"Warganegara","u":"Berungis","t":"Pulmonari kahak positif","o":"Mati","q":0},{"y":2020,"m":10,"a":"45–54","s":"Lelaki","c":"Warganegara","u":"Topokon","t":"Pulmonari kahak positif","o":"Sembuh","q":0},{"y":2020,"m":10,"a":"0–14","s":"Lelaki","c":"Warganegara","u":"Lembah","t":"Pulmonari kahak negatif","o":"Sempurna Rawatan","q":0},{"y":2020,"m":10,"a":"45–54","s":"Perempuan","c":"Bukan warganegara","u":"Kiulu","t":"Pulmonari kahak positif","o":"Sembuh","q":0},{"y":2020,"m":10,"a":"25–34","s":"Lelaki","c":"Bukan warganegara","u":"Kiulu","t":"Pulmonari kahak negatif","o":"Sempurna Rawatan","q":2},{"y":2020,"m":10,"a":"55–64","s":"Perempuan","c":"Warganegara","u":"Topokon","t":"Pulmonari kahak positif","o":"Sembuh","q":0},{"y":2020,"m":10,"a":"25–34","s":"Lelaki","c":"Warganegara","u":"Mangkaladoi","t":"Pulmonari kahak positif","o":"Sembuh","q":0},{"y":2020,"m":10,"a":"35–44","s":"Lelaki","c":"Warganegara","u":"Tamparuli","t":"Pulmonari kahak positif","o":"Sembuh","q":0},{"y":2020,"m":10,"a":"15–24","s":"Lelaki","c":"Warganegara","u":"Tuaran/Pekan","t":"Pulmonari kahak negatif","o":"Sempurna Rawatan","q":0},{"y":2020,"m":10,"a":"15–24","s":"Perempuan","c":"Warganegara","u":"Kiulu","t":"Pulmonari kahak positif","o":"Sembuh","q":2},{"y":2020,"m":11,"a":"55–64","s":"Lelaki","c":"Warganegara","u":"Berungis","t":"Pulmonari kahak positif","o":"Sembuh","q":0},{"y":2020,"m":11,"a":"65+","s":"Perempuan","c":"Warganegara","u":"Serusop","t":"Pulmonari kahak positif","o":"Gagal Rawatan","q":0},{"y":2020,"m":11,"a":"35–44","s":"Perempuan","c":"Warganegara","u":"Kiulu","t":"Tibi ekstrapulmonari","o":"Mati","q":0},{"y":2020,"m":11,"a":"35–44","s":"Lelaki","c":"Warganegara","u":"Tengah","t":"Pulmonari kahak positif","o":"Sembuh","q":0},{"y":2020,"m":11,"a":"15–24","s":"Lelaki","c":"Warganegara","u":"Tambalang","t":"Pulmonari kahak positif","o":"Sembuh","q":0},{"y":2020,"m":11,"a":"45–54","s":"Perempuan","c":"Warganegara","u":"Tenghilan","t":"Pulmonari kahak positif","o":"Mati","q":0}];
+    const TOTAL = DATA.length;
+    const FILTERS = [
+      {key:"y", label:"Tahun", all:"Semua tahun", order:(a,b)=>a-b},
+      {key:"s", label:"Jantina", all:"Semua jantina"},
+      {key:"a", label:"Kumpulan umur", all:"Semua umur", values:["0–14","15–24","25–34","35–44","45–54","55–64","65+","Tidak dinyatakan"]},
+      {key:"c", label:"Kewarganegaraan", all:"Semua status"},
+      {key:"u", label:"Mukim", all:"Semua mukim"},
+      {key:"t", label:"Klasifikasi", all:"Semua klasifikasi"},
+      {key:"o", label:"Hasil rawatan", all:"Semua hasil"}
+    ];
+    const state = Object.fromEntries(FILTERS.map(f => [f.key, ""]));
+    const ageOrder = ["0–14","15–24","25–34","35–44","45–54","55–64","65+","Tidak dinyatakan"];
+    const monthNames = ["Jan","Feb","Mac","Apr","Mei","Jun","Jul","Ogo","Sep","Okt","Nov","Dis"];
+    const fmt = new Intl.NumberFormat("ms-MY");
+
+    const $ = id => document.getElementById(id);
+    const esc = value => String(value).replace(/[&<>"']/g, c => ({"&":"&amp;","<":"&lt;",">":"&gt;","\"":"&quot;","'":"&#39;"})[c]);
+    const pct = (n, d) => d ? (n / d * 100) : 0;
+    const pct1 = (n, d) => `${pct(n,d).toFixed(1)}%`;
+    const isSuccess = row => row.o === "Sembuh" || row.o === "Sempurna Rawatan";
+    const isPulmonary = row => row.t !== "Tibi ekstrapulmonari";
+    const countBy = (rows, key) => rows.reduce((acc,row) => (acc[row[key]]=(acc[row[key]]||0)+1, acc), {});
+    const sortedEntries = object => Object.entries(object).sort((a,b)=>b[1]-a[1] || String(a[0]).localeCompare(String(b[0]),"ms"));
+
+    function setupFilters() {
+      const grid = $("filterGrid");
+      FILTERS.forEach(filter => {
+        const label = document.createElement("label");
+        label.className = "control";
+        label.textContent = filter.label;
+        const select = document.createElement("select");
+        select.id = `filter-${filter.key}`;
+        select.dataset.key = filter.key;
+        select.setAttribute("aria-label", filter.label);
+        const all = document.createElement("option");
+        all.value = ""; all.textContent = filter.all;
+        select.appendChild(all);
+        let values = filter.values || [...new Set(DATA.map(row => row[filter.key]))];
+        values = values.filter(v => v !== undefined && v !== null && v !== "");
+        if (filter.order) values.sort(filter.order); else if (!filter.values) values.sort((a,b)=>String(a).localeCompare(String(b),"ms"));
+        values.forEach(value => {
+          const option = document.createElement("option");
+          option.value = String(value); option.textContent = value;
+          select.appendChild(option);
+        });
+        select.addEventListener("change", () => { state[filter.key] = select.value; render(); });
+        label.appendChild(select); grid.appendChild(label);
+      });
+    }
+
+    function filteredRows() {
+      return DATA.filter(row => FILTERS.every(filter => !state[filter.key] || String(row[filter.key]) === state[filter.key]));
+    }
+
+    function renderKpis(rows) {
+      const n = rows.length;
+      const pulmonary = rows.filter(isPulmonary).length;
+      const positive = rows.filter(r => r.t === "Pulmonari kahak positif").length;
+      const success = rows.filter(isSuccess).length;
+      const deaths = rows.filter(r => r.o === "Mati").length;
+      const y2020 = rows.filter(r => r.y === 2020).length;
+      $("kTotal").textContent = fmt.format(n);
+      $("kTotalSub").textContent = `${pct1(n,TOTAL)} daripada pangkalan data`;
+      $("kPulm").textContent = fmt.format(pulmonary);
+      $("kPulmSub").textContent = `${pct1(pulmonary,n)} rekod terpilih`;
+      $("kPositive").textContent = fmt.format(positive);
+      $("kPositiveSub").textContent = `${pct1(positive,n)} rekod terpilih`;
+      $("kSuccess").textContent = pct1(success,n);
+      $("kSuccessSub").textContent = `${fmt.format(success)} daripada ${fmt.format(n)} rekod`;
+      $("kDeaths").textContent = fmt.format(deaths);
+      $("kDeathsSub").textContent = `${pct1(deaths,n)} rekod terpilih`;
+      $("k2020").textContent = fmt.format(y2020);
+      $("k2020Sub").textContent = `${pct1(y2020,n)} rekod terpilih`;
+      $("outcomeSuccess").textContent = `${pct1(success,n)} berjaya`;
+    }
+
+    function renderInsights(rows) {
+      if (!rows.length) { $("insights").innerHTML = '<div class="empty">Tiada rekod untuk kombinasi penapis ini.</div>'; return; }
+      const months = countBy(rows.map(r=>({...r, ym:`${r.y}-${String(r.m).padStart(2,"0")}`})), "ym");
+      const [peakKey, peakN] = sortedEntries(months)[0];
+      const [peakY, peakM] = peakKey.split("-").map(Number);
+      const [mukim, mukimN] = sortedEntries(countBy(rows,"u"))[0];
+      const [klass, klassN] = sortedEntries(countBy(rows,"t"))[0];
+      const items = [
+        ["Bulan tertinggi", `${monthNames[peakM-1]} ${peakY}: ${peakN} notifikasi`],
+        ["Mukim utama", `${mukim}: ${mukimN} kes (${pct1(mukimN,rows.length)})`],
+        ["Klasifikasi utama", `${klass}: ${klassN} kes (${pct1(klassN,rows.length)})`]
+      ];
+      $("insights").innerHTML = items.map(([label,value]) => `<div class="insight-item"><span>${esc(label)}</span><strong>${esc(value)}</strong></div>`).join("");
+    }
+
+    function renderTrend(rows) {
+      $("trendTotal").textContent = `n = ${fmt.format(rows.length)}`;
+      if (!rows.length) { $("trendChart").innerHTML = '<div class="empty">Tiada data trend untuk dipaparkan.</div>'; return; }
+      const allMonths = [...new Set(DATA.map(r => `${r.y}-${String(r.m).padStart(2,"0")}`))].sort();
+      const selectedYear = state.y;
+      const monthKeys = selectedYear ? allMonths.filter(k => k.startsWith(`${selectedYear}-`)) : allMonths;
+      const counts = Object.fromEntries(monthKeys.map(k => [k,0]));
+      rows.forEach(r => { const k=`${r.y}-${String(r.m).padStart(2,"0")}`; if(k in counts) counts[k]++; });
+      const values = monthKeys.map(k => counts[k]);
+      const W=760, H=238, left=38, right=12, top=20, bottom=36;
+      const max = Math.max(5, ...values);
+      const yMax = Math.ceil(max/5)*5;
+      const x = i => left + (monthKeys.length === 1 ? (W-left-right)/2 : i*(W-left-right)/(monthKeys.length-1));
+      const y = v => top + (yMax-v)*(H-top-bottom)/yMax;
+      const ticks = [0,.25,.5,.75,1].map(frac => Math.round(yMax*frac));
+      const line = values.map((v,i)=>`${i?"L":"M"}${x(i).toFixed(1)},${y(v).toFixed(1)}`).join(" ");
+      const area = `${line} L${x(values.length-1).toFixed(1)},${H-bottom} L${x(0).toFixed(1)},${H-bottom} Z`;
+      const grid = ticks.map(v=>`<line class="grid-line" x1="${left}" x2="${W-right}" y1="${y(v)}" y2="${y(v)}"/><text class="axis-label" x="${left-8}" y="${y(v)+3}" text-anchor="end">${v}</text>`).join("");
+      const labels = monthKeys.map((key,i)=>{ const [yr,mo]=key.split("-").map(Number); const shortYear = monthKeys.length>12 || new Set(monthKeys.map(k=>k.slice(0,4))).size>1; const label = `${monthNames[mo-1]}${shortYear?` '${String(yr).slice(2)}`:""}`; return `<text class="axis-label" x="${x(i)}" y="${H-12}" text-anchor="middle">${label}</text>`; }).join("");
+      const points = values.map((v,i)=>`<g><circle class="trend-point" cx="${x(i)}" cy="${y(v)}" r="4"><title>${esc(monthKeys[i])}: ${v} notifikasi</title></circle><text class="value-label" x="${x(i)}" y="${Math.max(11,y(v)-9)}" text-anchor="middle">${v}</text></g>`).join("");
+      $("trendChart").innerHTML = `<svg class="trend-svg" viewBox="0 0 ${W} ${H}" role="img" aria-label="Trend bulanan notifikasi tibi"><defs><linearGradient id="areaGradient" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#21a696" stop-opacity=".35"/><stop offset="1" stop-color="#21a696" stop-opacity=".02"/></linearGradient></defs>${grid}<path class="trend-area" d="${area}"/><path class="trend-line" d="${line}"/>${points}${labels}</svg>`;
+    }
+
+    function renderDonut(target, rows, key, primary, primaryLabel, secondary, secondaryLabel) {
+      const counts = countBy(rows,key); const n=rows.length; const a=counts[primary]||0; const b=counts[secondary]||0;
+      if (!n) { $(target).innerHTML='<div class="empty">Tiada data untuk dipaparkan.</div>'; return; }
+      const degree = pct(a,n);
+      $(target).innerHTML = `<div class="donut-wrap"><div class="donut" style="--pct:${degree}%"><div class="donut-center"><strong>${pct1(a,n)}</strong><span>${esc(primaryLabel)}</span></div></div><div class="mini-list"><div class="mini-item"><span class="mini-name"><i class="dot" style="background:var(--teal)"></i>${esc(primaryLabel)}</span><span class="mini-value">${a} · ${pct1(a,n)}</span></div><div class="mini-item"><span class="mini-name"><i class="dot" style="background:var(--gold)"></i>${esc(secondaryLabel)}</span><span class="mini-value">${b} · ${pct1(b,n)}</span></div>${n-a-b?`<div class="mini-item"><span class="mini-name"><i class="dot" style="background:#b9c4c0"></i>Lain-lain</span><span class="mini-value">${n-a-b}</span></div>`:""}</div></div>`;
+    }
+
+    function renderAge(rows) {
+      const grouped = Object.fromEntries(ageOrder.map(age => [age,{Lelaki:0,Perempuan:0,total:0}]));
+      rows.forEach(r => { if(!grouped[r.a]) grouped[r.a]={Lelaki:0,Perempuan:0,total:0}; grouped[r.a][r.s]=(grouped[r.a][r.s]||0)+1; grouped[r.a].total++; });
+      const max = Math.max(1,...Object.values(grouped).map(x=>x.total));
+      $("ageChart").innerHTML = ageOrder.map(age => { const g=grouped[age]; const male=g.Lelaki||0, female=g.Perempuan||0; return `<div class="age-row"><span class="bar-name">${esc(age)}</span><div class="stack" title="${male} lelaki, ${female} perempuan"><i class="male" style="width:${pct(male,max)}%"></i><i class="female" style="width:${pct(female,max)}%"></i></div><span class="bar-value">${g.total}</span></div>`; }).join("");
+    }
+
+    function renderBars(target, entries, total, colorClass="") {
+      if (!total) { $(target).innerHTML='<div class="empty">Tiada data untuk dipaparkan.</div>'; return; }
+      const max=Math.max(1,...entries.map(x=>x[1]));
+      $(target).innerHTML = entries.map(([name,value]) => `<div class="bar-row"><span class="bar-name">${esc(name)}</span><div class="bar-track"><div class="bar-fill ${colorClass}" style="width:${pct(value,max)}%"></div></div><span class="bar-value">${value}<small style="display:block;color:var(--muted);font-weight:650">${pct1(value,total)}</small></span></div>`).join("");
+    }
+
+    function renderMukim(rows) {
+      const groups = {};
+      rows.forEach(r => { const g=groups[r.u]||(groups[r.u]={n:0,success:0,deaths:0}); g.n++; if(isSuccess(r))g.success++; if(r.o==="Mati")g.deaths++; });
+      const entries = Object.entries(groups).sort((a,b)=>b[1].n-a[1].n || a[0].localeCompare(b[0],"ms"));
+      const max = Math.max(1,...entries.map(([,g])=>g.n));
+      $("mukimCount").textContent = `${entries.length} mukim`;
+      $("mukimTable").innerHTML = entries.length ? entries.map(([name,g])=>`<tr><td class="mukim-name">${esc(name)}</td><td>${g.n}</td><td><div class="inline-bar"><div class="inline-bar-track"><div class="inline-bar-fill" style="width:${pct(g.n,max)}%"></div></div>${pct1(g.n,rows.length)}</div></td><td>${g.success} <span style="color:var(--muted)">(${pct1(g.success,g.n)})</span></td><td>${g.deaths} <span style="color:var(--muted)">(${pct1(g.deaths,g.n)})</span></td></tr>`).join("") : '<tr><td colspan="5"><div class="empty">Tiada data mukim.</div></td></tr>';
+    }
+
+    function renderQuality(rows) {
+      const missingAge=rows.filter(r=>r.q&1).length;
+      const missingLocality=rows.filter(r=>r.q&2).length;
+      const outsideYear=rows.filter(r=>r.q&4).length;
+      const complete=rows.filter(r=>(r.q&3)===0).length;
+      const items=[
+        [complete,"Umur dan lokaliti lengkap",pct1(complete,rows.length)],
+        [missingAge,"Umur tidak dinyatakan",pct1(missingAge,rows.length)],
+        [missingLocality,"Lokaliti tidak dinyatakan",pct1(missingLocality,rows.length)],
+        [outsideYear,"Notifikasi di luar 2020",pct1(outsideYear,rows.length)]
+      ];
+      $("qualityGrid").innerHTML=items.map(([value,label,rate])=>`<div class="quality-item"><strong>${value}</strong><span>${esc(label)} · ${rate}</span></div>`).join("");
+    }
+
+    function renderFilterStatus(rows) {
+      const active = FILTERS.filter(f=>state[f.key]).map(f=>`${f.label}: ${state[f.key]}`);
+      $("toolbarCount").textContent = `${fmt.format(rows.length)} daripada ${fmt.format(TOTAL)} rekod`;
+      $("toolbarHint").textContent = active.length ? `${active.length} penapis aktif` : "Semua penapis";
+      $("filterResult").textContent = `${fmt.format(rows.length)} rekod`;
+      $("activeFilters").innerHTML = active.length ? active.map(x=>`<span class="chip">${esc(x)}</span>`).join("") : '<span class="chip">Semua data dipaparkan</span>';
+    }
+
+    function render() {
+      const rows = filteredRows();
+      renderFilterStatus(rows);
+      renderKpis(rows);
+      renderInsights(rows);
+      renderTrend(rows);
+      renderDonut("sexDonut", rows, "s", "Lelaki", "Lelaki", "Perempuan", "Perempuan");
+      renderAge(rows);
+      renderDonut("citizenDonut", rows, "c", "Warganegara", "Warganegara", "Bukan warganegara", "Bukan warganegara");
+      renderBars("classChart", sortedEntries(countBy(rows,"t")), rows.length);
+      const outcomeEntries=sortedEntries(countBy(rows,"o"));
+      renderBars("outcomeChart", outcomeEntries, rows.length, "gold");
+      renderMukim(rows);
+      renderQuality(rows);
+    }
+
+    function csvEscape(value) { const s=String(value); return /[",\n]/.test(s)?`"${s.replace(/"/g,'""')}"`:s; }
+    function exportCsv() {
+      const rows=filteredRows(); const groups={};
+      rows.forEach(r=>{const g=groups[r.u]||(groups[r.u]={n:0,success:0,deaths:0});g.n++;if(isSuccess(r))g.success++;if(r.o==="Mati")g.deaths++;});
+      const lines=[["Mukim","Notifikasi","Bahagian (%)","Kejayaan Rawatan","Kejayaan (%)","Kematian","Kematian (%)"]];
+      Object.entries(groups).sort((a,b)=>b[1].n-a[1].n).forEach(([name,g])=>lines.push([name,g.n,pct(g.n,rows.length).toFixed(1),g.success,pct(g.success,g.n).toFixed(1),g.deaths,pct(g.deaths,g.n).toFixed(1)]));
+      const blob=new Blob(["\ufeff"+lines.map(line=>line.map(csvEscape).join(",")).join("\n")],{type:"text/csv;charset=utf-8"});
+      const url=URL.createObjectURL(blob); const a=document.createElement("a"); a.href=url; a.download="Ringkasan_Tibi_Tuaran_Mengikut_Mukim.csv"; a.click(); URL.revokeObjectURL(url);
+    }
+
+    $("filterToggle").addEventListener("click",()=>{const panel=$("filters");const open=panel.classList.toggle("open");$("filterToggle").setAttribute("aria-expanded",String(open));if(open)panel.scrollIntoView({behavior:"smooth",block:"start"});});
+    $("resetBtn").addEventListener("click",()=>{FILTERS.forEach(f=>{state[f.key]=""; $(`filter-${f.key}`).value="";});render();});
+    $("exportBtn").addEventListener("click",exportCsv);
+    $("printBtn").addEventListener("click",()=>window.print());
+    setupFilters();
+    render();
+  </script>
+</body>
+</html>
